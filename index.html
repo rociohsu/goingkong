@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
 <head>
-<meta charset="utf-8">
-<title>GoingKong出來講</title>
-<meta name="description" content="GoingKong出來講" />
-<meta name="keywords" content="GoingKong出來講" />
+    <meta charset="utf-8">
+    <title>GoingKong出來講</title>
+    <meta name="description" content="GoingKong出來講" />
+    <meta name="keywords" content="GoingKong出來講" />
 
-<meta property="og:title" content="GoingKong出來講" />
-<meta property="og:description" content="GoingKong出來講" />
-<meta property="og:url" content="https://www.goingkong.com/" />
-<meta property="og:image" content="images/banner.jpg" />
-<meta property="og:type" content="website" />
+    <meta property="og:title" content="GoingKong出來講" />
+    <meta property="og:description" content="GoingKong出來講" />
+    <meta property="og:url" content="https://www.goingkong.com/" />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta property="og:type" content="website" />
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="MobileOptimized" content="width">
-<meta name="HandheldFriendly" content="true">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel="shortcut icon" type="image/png" href="images/favicon.ico">
-<link rel="stylesheet" href="css/standard.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/standard.css">
 
-<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
-<script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/layout.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
 </head>
- 
+
 <body>
-<header>
-    <div class="header-l">
-        <div class="logo"><img src="images/GoingKong-logo.png"></div>
-        <nav>
-            <div>
-                <input type="checkbox" id="nav-second-open">
-                <label for="nav-second-open">
-                    學習 <i class="fa-solid fa-angle-down"></i>
+    <header>
+        <div class="header-l">
+            <div class="logo"><a href="index.html"><img src="images/GoingKong-logo.png"></a></div>
+            <nav>
+                <div class="nav-second-open">學習 <i class="fa-solid fa-angle-down"></i>
 
                     <div class="nav-second">
-                        <div><a href="#">預約列表</a></div>
+                        <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>預約列表</b></a></div>
+                        <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>上課記錄</b></a></div>
+                        <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>課後訊息</b></a></div>
+                        <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a></div>
+                        <div>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i> <b>上課需求</b>
+                                <p>上課需求，會在上課時顯示讓講師了解</p>
+                            </a>
+                        </div>
                     </div>
-                </label>
-            </div>
-            <div><a href="#">搜尋講師</a></div>
-            <div><a href="#">講師排行榜</a></div>
-            <div><a href="#">教材</a></div>
-        </nav>
-    </div>
-    <div class="menu">
-        <div class="bar-mobile"><i class="fa-solid fa-bars"></i></div>
-        <div class="bar-faq"><i class="fa-solid fa-circle-question"></i></div>
-        <div class="menu-r">
-            <div class="menu-r-close"><i class="fa-solid fa-xmark"></i></div>
-            <div><a href="#">成為老師</a></div>
-            <div><a href="#">登入</a></div>
-            <div><a href="#">註冊</a></div>
+                </div>
+                <div><a href="#">搜尋講師</a></div>
+                <div><a href="#">講師排行榜</a></div>
+                <div><a href="#">教材</a></div>
+            </nav>
         </div>
-    </div>
-</header>
+        <div class="menu">
+            <div class="bar-mobile"><i class="fa-solid fa-bars"></i></div>
+            <div class="bar-faq"><a href="#"><i class="fa-solid fa-circle-question"></i></a></div>
+            <div class="menu-r">
+                <div class="menu-r-mobile menu-r-close"><i class="fa-solid fa-xmark"></i></div>
+                <div class="user-pic"><a href="#"><img src="images/headpic.jpg"></a></div>
+                <div class="menu-r-mobile user-name"><b>張比鼻</b>, 歡迎回來!</div>
+                <div><a href="#">註冊</a></div>
+                <div><a href="#">登入</a></div>
+                <div><a href="#">成為老師</a></div>
+            </div>
+        </div>
+    </header>
 
-<div style="height: 1000px;">123</div>
+    <div class="container">
+        <section class="mainkv">
+            <img class="pc" src="images/mainkv.jpg">
+            <img class="mobile" src="images/mainkv-m.jpg">
+        </section>
+        <section class="search-map">
+            <h2><i class="fa-solid fa-location-dot"></i> 城市中挑選師資</h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7361987173117!2d121.50477737559326!3d25.043025077810526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909714e4df1%3A0xb82edf5a3381aab2!2zSCZNIOWPsOWMl-ilv-mWgOaXl-iJpuW6lw!5e0!3m2!1szh-TW!2stw!4v1683710377073!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+
+    <footer>
+        <div class="logo"><a href="index.html"><img src="images/GoingKong-logo.png"></a></div>
+        <div class="social-links">
+            <a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="web-links">
+            <a href="#">使用條款</a>
+            <a href="#">支援與服務</a>
+        </div>
+        <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
+    </footer>
+
 </body>
- 
+
 </html>
