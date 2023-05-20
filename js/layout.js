@@ -6,7 +6,9 @@ $(function() {
 
     /* mobile close menu */
     $('.menu .menu-r-close, .container, footer').click(function(){
-        $('.menu-r').fadeOut(300);
+        if( $(window).width() < 821 ){
+            $('.menu-r').fadeOut(300);
+        }
     });
 
     /* open nav-second */
@@ -17,5 +19,16 @@ $(function() {
     /* close nav-second */
     $('.container, footer').click(function(){
         $('.nav-second').slideUp(300);
+    });
+
+    /* open popup */
+    $('a.popup').click(function(){
+        var id = $(this).attr('rel');
+        $('#'+id).show();
+    });
+
+    /* close popup */
+    $('.popup-theme .overlay-bg, .popup-close-x, .popup-close').click(function() {
+        $(this).closest('.popup-theme').hide();
     });
 });
