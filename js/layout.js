@@ -31,4 +31,11 @@ $(function() {
     $('.popup-theme .overlay-bg, .popup-close-x, .popup-close').click(function() {
         $(this).closest('.popup-theme').hide();
     });
+
+    /* change panel */
+    $('.tabs > a').click(function(){
+        var id = $(this).attr('rel');
+        $('.panel').not('.panel-'+id).hide();
+        $('.panel-'+id).fadeIn(300);
+    });
 });

@@ -7,6 +7,7 @@
 @color-cisbase-light: #e8e5f6;
 @color-white: #FFFFFF;
 @color-black: #000000;
+@color-yellow: #d8c035;
 @color-normal: #282828;
 @color-dark: #171717;
 @color-light: #979797;
@@ -30,7 +31,7 @@
 @img-path: "../images/";
 
 /* default */
-body { .font-family(15px); color: @color-normal; background: @color-lightist; }
+body { .font-family(15px); color: @color-normal; }
 body * { .padding-box(); }
 a, button, select { cursor: pointer; }
 a { color: @color-cisbase; }
@@ -74,7 +75,7 @@ img { max-width: 100%; height: auto; }
 
 /* header */
 header { position: sticky; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-    top: 0; padding: 15px 25px; background: @color-white; border-bottom: 1px solid @color-lighter; z-index: 1;
+    top: 0; padding: 15px 25px; background: @color-white; border-bottom: 1px solid @color-lighter !important; z-index: 1;
 
     > * { width: 100%; }
     .header-l { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
@@ -161,7 +162,7 @@ footer { padding: 25px; text-align: center; background: @color-white; border-top
 }
 
 /* 內容區 */
-.container { min-height: calc(100vh - 85px); padding-bottom: 5vh;
+.container { min-height: calc(100vh - 85px); margin: 0 auto; padding-bottom: 5vh; background: @color-lightist;
     h2 { margin-bottom: 15px; padding: 20px 10px; color: @color-cisbase; font-size: 32px; font-weight: bold; text-align: center;}
 }
 
@@ -208,8 +209,8 @@ section:not(.mainkv) { padding: 2% 5%; }
         .head-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; }
         .teacher-name { margin: 10px 0; font-size: 18px; font-weight: bold; text-align: center; }
         .country { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-            .country-flag { width: 30px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
-            .country-name { width: calc(100% - 40px); font-size: 14px; }
+            .country-flag { width: 24px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
+            .country-name { width: calc(100% - 30px); font-size: 14px; }
         }
     }
 }
@@ -294,4 +295,64 @@ section:not(.mainkv) { padding: 2% 5%; }
         }
         .plan-comparison-fixed { display: block; position: absolute; width: 244px; top: 0; left: 0; pointer-events: none; }
     }
+}
+
+/* 講師頁面 */
+.container.teacher { max-width: 1000px; padding-left: 15px; padding-right: 15px; background: @color-white; }
+.profile {margin: 20px auto; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+    .head-pic { width: 80px; height: 80px; margin-right: 20px;
+        display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+        border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; }
+
+    .profile-info { width: calc(100% - 300px);
+        .teacher-name { margin-bottom: 5px; font-size: 18px; font-weight: bold; }
+        .years-old > * { display: inline-block;  }
+        .birthday { margin-left: 10px; }
+        .country { margin: 5px auto; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+            .country-flag { width: 20px; margin-right: 5px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
+            .country-name { width: calc(100% - 30px); font-size: 14px; }
+        }
+        .evaluate { 
+            > div { margin-right: 10px; display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center;
+                > i { color: @color-yellow; font-size: 12px; }
+            }
+        }
+    }
+
+    .sys-btn-icon { width: 200px; display: flex; flex-flow: nowrap; justify-content: space-around; align-items: center; 
+        border: 1px solid @color-cisbase; border-radius: 10px;
+
+        > a { padding: 10px 10px 15px 10px; text-align: center; 
+            > i { padding: 5px; font-size: 24px; border-radius: 99em; }
+        }
+        > a:hover > i { background: @color-lightist; }
+    }
+}
+
+.videowrap { width: 100%; max-width: 1000px; margin: 0 auto; 
+    .video { position: relative; width: 100%; height: 0; padding-top: 56.25%; /*16:9*/ }
+    .video iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+}
+
+.tabs { margin: 30px auto 20px auto; text-align: center; border-bottom: 1px solid @color-cisbase; 
+    display: flex; flex-flow: nowrap; justify-content: space-between; align-items: flex-end;
+    > a { width: 100%; padding: 10px; font-size: 18px; border-radius: 10px 10px 0 0; }
+    > a:hover { background: @color-cisbase-light; }
+    a.current { color: @color-white; background: @color-cisbase; }
+}
+
+.panel { display: none; }
+.panel.current { display: block; }
+
+@media (max-width: 820px) {
+    .profile { flex-flow: wrap; margin-bottom: 10px;
+        .profile-info { width: calc(100% - 100px); }
+        .sys-btn-icon { width: 100%; margin-top: 10px; justify-content: center; 
+            > a { margin: 0 20px;
+                > i { font-size: 20px; }
+            }
+        }
+    }
+
+    .tabs > a { width: auto; padding: 10px 14px; font-size: 16px; }
 }
