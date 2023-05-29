@@ -35,7 +35,9 @@ $(function() {
     /* change panel */
     $('.tabs > a').click(function(){
         var id = $(this).attr('rel');
-        $('.panel').not('.panel-'+id).hide();
-        $('.panel-'+id).fadeIn(300);
+        $('.tabs > a').removeClass('current');
+        $(this).addClass('current');
+        $('.panel').removeClass('current');
+        $('.panel-'+id).addClass('current');
     });
 });
