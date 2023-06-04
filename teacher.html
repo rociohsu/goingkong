@@ -51,8 +51,9 @@
         </nav>
     </div>
     <div class="menu">
-        <div class="bar-mobile"><i class="fa-solid fa-bars"></i></div>
         <div class="bar-faq"><a href="#"><i class="fa-solid fa-question"></i></a></div>
+        <a class="bar-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="bar-mobile"><i class="fa-solid fa-bars"></i></div>
         <div class="menu-r">
             <div class="menu-r-mobile menu-r-close"><i class="fa-solid fa-xmark"></i></div>
             <div class="user-pic"><a href="#"><img src="images/headpic.jpg"></a></div>
@@ -64,6 +65,28 @@
 </header>
 
 <div class="container teacher">
+    <div class="sys-btn-icon">
+        <a class="enter-now" href="#"><i class="fa-solid fa-camera"></i><br>進入上課</a>
+
+        <a href="#timetable"><i class="fa-solid fa-calendar-days"></i><br>預約上課</a>
+
+        <a href="#"><i class="fa-regular fa-comment-dots"></i><br>聯繫教師</a>
+
+        <!-- 我的最愛 未加入 -->
+        <a href="#"><i class="fa-regular fa-heart gray"></i>99<br>我的最愛</a>
+
+        <!-- 我的最愛 已加入 -->
+        <!-- <a href="#"><i class="fa-solid fa-heart"></i>100<br>我的最愛</a> -->
+
+        <div class="other-btn"><i class="fa-solid fa-ellipsis"></i><br>其他
+            <div class="sys-btn-second">
+                <a href="#"><i class="fa-solid fa-eye"></i> 隱藏教師</a>
+                <a href="#"><i class="fa-solid fa-eye-slash"></i> 解除隱藏</a>
+                <a href="#"><i class="fa-solid fa-hand"></i> 舉報教師</a>
+            </div>
+        </div>
+    </div>
+
     <div class="wrap">
         <div class="wrap-left">
             <div class="videowrap">
@@ -71,57 +94,7 @@
                     <iframe src="https://www.youtube.com/embed/VvzB4uR3EjE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-        </div><!-- END .wrap-left -->
 
-        <div class="wrap-right">
-            <div class="sys-btn-icon">
-                <!-- 我的最愛 未加入 -->
-                <a><i class="fa-regular fa-heart"></i><br>我的最愛</a>
-
-                <!-- 我的最愛 已加入 -->
-                <!-- <a><i class="fa-solid fa-heart"></i><br>我的最愛</a> -->
-
-                <a><i class="fa-regular fa-comment-dots"></i><br>發送訊息</a>
-
-                <a href="#timetable"><i class="fa-solid fa-calendar-days"></i><br>預約上課</a>
-            </div>
-
-            <section class="free-plan">
-                <h2>自由方案 - 講師自定組合</h2>
-
-                <a class="free-plan-list hvr-glow" href="#">
-                    <div class="intro">
-                        <div class="head-pic"><img src="images/headpic.jpg"></div>
-                        <div class="detail">
-                            <h3>專屬體驗課 (限購1次)</h3>
-                            <div class="subtotal">單堂25分鐘/$100</div>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <div>5堂體驗課</div>
-                        <div class="price">共$500</div>
-                    </div>
-                </a>
-
-                <a class="free-plan-list hvr-glow" href="#">
-                    <div class="intro">
-                        <div class="head-pic"><img src="images/headpic.jpg"></div>
-                        <div class="detail">
-                            <h3>正式課</h3>
-                            <div class="subtotal">單堂25分鐘/$150</div>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <div>5堂正式課</div>
-                        <div class="price">共$750</div>
-                    </div>
-                </a>
-            </section>
-        </div><!-- END .wrap-right -->
-    </div><!-- END .wrap -->
-
-    <div class="wrap">
-        <div class="wrap-left">
             <section class="profile">
                 <div class="head-pic"><img src="images/headpic.jpg"></div>
                 <div class="profile-info">
@@ -165,6 +138,40 @@
                     </div>
                 </div><!-- END .profile-info -->
             </section><!-- END .profile -->
+
+            <section class="free-plan">
+                <h2>自由方案 - 講師自定組合</h2>
+
+                <a class="free-plan-list hvr-glow" href="#">
+                    <div class="intro">
+                        <div class="head-pic"><img src="images/headpic.jpg"></div>
+                        <div class="detail">
+                            <h3>專屬體驗課 (限購1次)</h3>
+                            <div class="desc">🧡🧡💛6月優惠組合💚💙💜</div>
+                            <div class="subtotal">單堂25分鐘/$100</div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div>5堂體驗課 $500</div>
+                        <div class="btn"><i class="fa-solid fa-cart-shopping"></i> 購買</div>
+                    </div>
+                </a>
+
+                <a class="free-plan-list hvr-glow" href="#">
+                    <div class="intro">
+                        <div class="head-pic"><img src="images/headpic.jpg"></div>
+                        <div class="detail">
+                            <h3>正式課</h3>
+                            <div class="desc">🧡🧡💛6月優惠組合💚💙💜</div>
+                            <div class="subtotal">單堂25分鐘/$150</div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div>5堂體驗課 $750</div>
+                        <div class="btn"><i class="fa-solid fa-cart-shopping"></i> 購買</div>
+                    </div>
+                </a>
+            </section>
 
             <section class="introduction">
                 <h2>自我介紹</h2>
@@ -240,50 +247,6 @@
                     </div>
                 </div>
             </section>
-            
-            <section class="educational">
-                <h2>學歷</h2>
-
-                <div class="educational-list">
-                    <div class="certified"><span class="state"><i class="fa-solid fa-circle-check"></i><br>已認證</span></div>
-                    <div class="content">
-                        <div>Malaysia University</div>
-                        <div>Master</div>
-                        <div>Communication</div>
-                        <time>2010.9 ~ 2014.6</time>
-                    </div>
-                </div>
-
-                <div class="educational-list">
-                    <div class="content">
-                        <div>Malaysia University</div>
-                        <div>Master</div>
-                        <div>Communication</div>
-                        <time>2010.9 ~ 2014.6</time>
-                    </div>
-                </div>
-            </section>
-
-            <section class="work">
-                <h2>工作經驗</h2>
-                <div class="work-list">
-                    <div>財務/會計 | 經理</div>
-                    <time>2005.9 ~ 2010.12</time>
-                </div>
-
-                <div class="work-list">
-                    <div>總務/人事 | 人事（錄用）</div>
-                    <time>2011.1 ~ 2010.12</time>
-                </div>
-            </section>
-
-            <section class="license">
-                <h2>證照/執照</h2>
-                <div class="license-list">
-                    <div>日文丙級檢定</div>
-                    <time>2023.1.1</time>
-                </div>
-            </section>
 
             <section class="timetable" id="timetable">
                 <h2>預約上課</h2>
@@ -317,6 +280,50 @@
                     <div>小提琴 Violin</div>
                     <div>母語講師 Native Speaker</div>
                     <div>鋼琴 Piano</div>
+                </div>
+            </section>
+
+            <section class="educational">
+                <h2>學歷</h2>
+
+                <div class="educational-list">
+                    <div class="content">
+                        <div>Malaysia University</div>
+                        <div>Master</div>
+                        <div>Communication</div>
+                        <time>2010.9 ~ 2014.6</time>
+                    </div>
+                    <div class="certified"><span class="state"><i class="fa-solid fa-circle-check"></i><br>已認證</span></div>
+                </div>
+
+                <div class="educational-list">
+                    <div class="content">
+                        <div>Malaysia University</div>
+                        <div>Master</div>
+                        <div>Communication</div>
+                        <time>2010.9 ~ 2014.6</time>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work">
+                <h2>工作經驗</h2>
+                <div class="work-list">
+                    <div>財務/會計 | 經理</div>
+                    <time>2005.9 ~ 2010.12</time>
+                </div>
+
+                <div class="work-list">
+                    <div>總務/人事 | 人事（錄用）</div>
+                    <time>2011.1 ~ 2010.12</time>
+                </div>
+            </section>
+
+            <section class="license">
+                <h2>證照/執照</h2>
+                <div class="license-list">
+                    <div>日文丙級檢定</div>
+                    <time>2023.1.1</time>
                 </div>
             </section>
         </div><!-- END .wrap-right -->
