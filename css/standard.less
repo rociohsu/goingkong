@@ -41,10 +41,11 @@ select, input, textarea, button { .font-family(16px); }
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px @color-white inset !important; }
 img { max-width: 100%; height: auto; }
 .basic-btn { 
-    display: inline-block; margin: 10px; padding: 15px 30px; .font-family(18px); 
+    display: inline-block; margin: 10px; padding: 10px 30px; .font-family(18px); 
     color: @color-white; 
-    background: @color-cisbase; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+    background: @color-cisbase; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); transition: 0.3s;
 }
+.basic-btn:hover { background: @color-red; }
 
 /* popup */
 .popup-theme { display: none;
@@ -110,7 +111,8 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
         .menu-r-mobile { display: none; }
         .menu-r { display: flex; flex-flow: row-reverse; justify-content: flex-end; align-items: center;
 
-            > div:not(.user-pic) > a { display: inline-block; padding: 5px 15px; background: @color-cisbase-light; border-radius: 25px; }
+            > div:not(.user-pic) > a { display: inline-block; padding: 5px 15px; background: @color-cisbase-light; border-radius: 25px; transition: 0.3s; }
+            > div:not(.user-pic) > a:hover { color: @color-white; background: @color-cisbase; }
 
             .user-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 99em; overflow: hidden; 
                 > a { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
@@ -413,15 +415,30 @@ footer { padding: 25px; text-align: center; background: @color-white; border-top
         }
         .total { width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; padding: 20px; 
             color: @color-cisbase; font-weight: bold; background: @color-cisbase-light; 
-            .btn { padding: 5px 15px; color: @color-white; background: @color-cisbase; border-radius: 30px; }
+            .btn { padding: 5px 15px; color: @color-white; background: @color-cisbase; border-radius: 30px; transition: 0.3s; }
         }
     }
     .free-plan-list:nth-child(odd) { margin-right: 0; }
-    .free-plan-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
+    .free-plan-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+        .btn { background: @color-red; }
+    }
 }
 
 .textbook-list { display: block; padding: 20px; margin-bottom: 20px; color: @color-cisbase; font-size: 18px; background: @color-lightist; border-radius: 25px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); overflow: hidden; }
 .textbook-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
+
+.notebook { 
+    textarea { width: 100%; min-height: 200px; padding: 15px; background: @color-white; border: 1px solid @color-lighter; border-radius: 5px; }
+}
+
+.evaluate-list { margin-bottom: 20px; border: 1px solid @color-cisbase-light; border-radius: 10px; overflow: hidden;
+    .row { padding: 15px; font-size: 16px; 
+        .hashtag { display: inline-block; margin: 0 5px 10px 0; padding: 5px 15px; border: 1px solid @color-lighter; border-radius: 5px; }
+    }
+    .row.top { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; background: @color-cisbase-light; 
+        .star { color: @color-yellow; font-size: 18px; }
+    }
+}
 
 @media (max-width: 820px) {
     .container.teacher .wrap {
