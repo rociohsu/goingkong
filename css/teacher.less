@@ -1,0 +1,187 @@
+@import url("standard");
+
+/* 講師頁面 */
+.container.teacher { background: @color-white; 
+    section { margin-bottom: 30px; 
+        h2 { width: 100%; padding: 0; color: @color-light; font-size: 14px; font-weight: normal; text-align: left; }
+    }   
+
+    .wrap { max-width: 1440px; margin: 0 auto; padding: 0 15px; 
+        display: flex; flex-flow: wrap; justify-content: space-between; align-items: flex-start; 
+        .wrap-left { width: calc(100% - 340px); margin-right: 30px; }
+        .wrap-right { position: sticky; top: 90px; width: 300px; }
+        .wrap-top { display: flex; flex-flow: row-reverse; }
+    }
+}
+
+.profile { margin: 20px auto; display: flex; flex-flow: wrap; justify-content: space-between; align-items: center;
+    .head-pic { width: 120px; height: 120px; margin-right: 15px;
+        display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+        border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; 
+    }
+
+    .profile-info { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+        .teacher-name { margin-bottom: 5px; font-size: 18px; font-weight: bold; }
+        .years-old > * { display: inline-block;  }
+        .birthday { margin-right: 10px; }
+        .country { margin: 5px auto; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+            .country-flag { width: 20px; margin-right: 5px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
+            .country-name { width: calc(100% - 25px); font-size: 14px; }
+        }
+    }
+    .profile-info.more { display: block; }
+
+    .evaluate { 
+        > div { margin-bottom: 10px; display: flex; flex-flow: nowrap; align-items: center;
+            > span { margin-right: 5px; }
+            > i { color: @color-yellow; font-size: 12px; }
+            > b { margin-left: 5px; color: @color-cisbase; }
+        }
+    }
+    
+    .frequency { width: 100%; 
+        > div { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 10px; 
+            > b { display: inline-block; margin: 0 5px; font-size: 18px; color: @color-cisbase; }
+        }
+    }
+}
+
+.sys-btn-icon { width: 100%; max-width: 1440px; margin: 20px auto; display: flex; flex-flow: nowrap; justify-content: space-around; align-items: center; 
+    background: @color-white; border-bottom: 1px solid @color-lightist; z-index: 1;
+
+    > * { padding: 10px 10px 15px 10px; text-align: center; 
+        > i { padding: 5px; font-size: 24px; }   
+        .fa-heart.gray { color: @color-light; } 
+        .sys-btn-second { display: none; }
+    }
+    > a:hover { background: @color-cisbase-light; }
+    .enter-now { color: @color-red; }
+    .other-btn { position: relative; color: @color-cisbase; cursor: pointer; }
+    .other-btn:hover .sys-btn-second { display: block;
+        position: absolute; width: 120px; top: 40px; right: 5px; background: @color-white; border: 1px solid @color-lighter; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 1;
+        > a { display: block; padding: 10px 15px; }
+        > a:hover { color: @color-white; background: @color-cisbase; }
+    }
+}
+
+.videowrap { width: 100%; margin: 0 auto 20px auto; 
+    .video { position: relative; width: 100%; height: 0; padding-top: 56.25%; /*16:9*/ }
+    .video iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+}
+
+.introduction { line-height: 160%; 
+    > h2 { margin-top: -20px; }
+}
+
+.album {
+    .lg-react-element { display: flex; flex-flow: wrap; justify-content: stretch; max-height: 160px; overflow: hidden;
+        > a { display: inline-block; width: calc(20% - 5px); margin-right: 5px;
+            > img { width: 100%; height: 160px; object-fit: cover; }
+        }
+    }
+}
+
+.language { display: flex; flex-flow: wrap; justify-content: space-between; 
+    .language-list { display: flex; flex-flow: nowrap;
+        width: calc(50% - 10px); margin: 10px 20px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
+        h3 { font-weight: normal; }
+        .state { display: inline-block; margin-left: 10px; color: @color-cisbase; }
+        .level { margin-top: 10px; color: @color-yellow; }
+    }
+    .language-list:nth-child(odd) { margin-right: 0; }
+}
+
+.educational { display: flex; flex-flow: wrap; justify-content: space-between; 
+    .educational-list { display: flex; flex-flow: row-reverse; align-items: center;
+        width: calc(50% - 10px); margin: 0 10px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
+        .content { width: 100%; }
+        .certified { width: auto; margin-right: 20px; padding-right: 20px; color: @color-cisbase; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
+    }
+    .educational-list:nth-child(odd) { margin-right: 0; }
+}
+
+.work-list { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 5px;
+    > time { margin-left: 20px; }
+}
+
+.license-list { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 5px;
+    > time { margin-left: 20px; }
+}
+
+.interest-list > div, .skill-list > div { display: inline-block; margin: 0 5px 10px 0; padding: 10px 15px; border: 1px solid @color-lighter; border-radius: 25px; }
+
+.free-plan { display: flex; flex-flow: wrap; justify-content: space-between; align-items: stretch; margin-bottom: 10px !important;
+    .free-plan-list { display: flex; flex-flow: wrap; justify-content: space-between; align-items: stretch;
+        width: 100%; margin-bottom: 20px; color: @color-normal; font-size: 18px; background: @color-lightist; border-radius: 25px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); overflow: hidden;
+        .intro { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; width: 100%; padding: 20px;
+            .head-pic { width: 60px; margin-right: 10px;
+                display: flex; flex-flow: nowrap; justify-content: center; align-items: center; border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; 
+            }
+            .detail { width: calc(100% - 70px); font-size: 16px;
+                h3 { color: @color-cisbase; font-size: 18px; }
+            }
+        }
+        .total { width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; padding: 20px; 
+            color: @color-cisbase; font-weight: bold; background: @color-cisbase-light; 
+            .btn { padding: 5px 15px; color: @color-white; background: @color-cisbase; border-radius: 30px; transition: 0.3s; }
+        }
+    }
+    .free-plan-list:nth-child(odd) { margin-right: 0; }
+    .free-plan-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+        .btn { background: @color-red; }
+    }
+}
+
+.textbook-list { display: inline-block; padding: 20px; margin: 0 10px 15px 0; color: @color-cisbase; font-size: 18px; background: @color-lightist; border-radius: 25px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); overflow: hidden; }
+.textbook-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
+
+.notebook { 
+    textarea { width: 100%; min-height: 100px; padding: 10px; background: @color-white; border: 1px solid @color-lighter; border-radius: 5px; }
+}
+
+.evaluate-list { margin-bottom: 20px; border: 1px solid @color-cisbase-light; border-radius: 10px; overflow: hidden;
+    .row { padding: 15px; font-size: 16px; 
+        .hashtag { display: inline-block; margin: 0 5px 10px 0; padding: 5px 15px; border: 1px solid @color-lighter; border-radius: 5px; }
+    }
+    .row.top { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; background: @color-cisbase-light; 
+        .star { color: @color-yellow; font-size: 18px; }
+    }
+}
+
+.tabs { margin: 30px auto 20px auto; text-align: center; border-bottom: 1px solid @color-cisbase; 
+    display: flex; flex-flow: nowrap; justify-content: space-between; align-items: flex-end;
+    > a { width: 100%; padding: 10px 5px; font-size: 18px; border-radius: 10px 10px 0 0; }
+    > a:hover { background: @color-cisbase-light; }
+    a.current { color: @color-white; background: @color-cisbase; }
+}
+
+.panel { display: none; }
+.panel.current { display: block; }
+
+@media (max-width: 820px) {
+    .container.teacher .wrap {
+        .wrap-left { width: 100%; margin-right: 0; }
+        .wrap-right { width: 100%; }
+        .wrap-top { flex-flow: wrap; }
+    }
+
+    .sys-btn-icon { margin: 0; border-radius: 0; border-bottom: 0; font-size: 14px; background: @color-lightist; }
+
+    .videowrap { margin: 10px auto 0 auto; }
+
+    .profile { flex-flow: wrap; margin-bottom: 10px; 
+        .profile-info.more { margin-top: 10px; 
+            .evaluate > div, .frequency > div { display: inline-flex; margin-right: 10px; }
+        }
+    }
+
+    .album .lg-react-element { max-height: 120px;
+        > a { width: calc(33.3% - 5px); 
+            > img { height: 120px; }
+        }
+    }
+
+    .educational-list, .language-list { width: 100% !important; margin-right: 0 !important; }
+
+    .tabs > a { padding: 10px 0; font-size: 14px; }
+}

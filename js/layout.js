@@ -38,6 +38,6 @@ $(function() {
         $('.tabs > a').removeClass('current');
         $(this).addClass('current');
         $('.panel').removeClass('current');
-        $('.panel-'+id).addClass('current');
+        $('.'+id).addClass('current');
     });
 });
