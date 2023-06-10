@@ -328,6 +328,114 @@
 
             <section class="timetable" id="timetable">
                 <h2>預約上課</h2>
+
+                <div class="timetable-info">
+                    <div class="lesson-state"><i class="fa-solid fa-user lesson--reserved"></i> 已預約課程</div>
+
+                    <div class="lesson-state"><i class="fa-solid fa-check lesson--standard"></i> 標準課程(可預約)</div>
+
+                    <div class="lesson-state"><i class="fa-solid fa-check lesson--free"></i> 自由課程(可預約)</div>
+
+                    <div class="lesson-state"><i class="fa-solid fa-check lesson--discount"></i> 優惠課程(可預約)</div>
+                    
+                    <div class="lesson-state"><i class="fa-solid fa-check lesson--event"></i> 活動課程(可預約)</div>
+                </div>
+
+                <div class="timetable-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>日期<br>時間</td>
+                            <td>06/10<br>(六)</td>
+                            <td>06/11<br>(日)</td>
+                            <td>06/12<br>(一)</td>
+                            <td>06/13<br>(二)</td>
+                            <td>06/14<br>(三)</td>
+                            <td>06/15<br>(四)</td>
+                            <td>06/16<br>(五)</td>
+                            <td>06/17<br>(六)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>00:00</th>
+                            <td>
+                                <a class="lesson-state popup hvr-glow" rel="lesson-cancel" title="已預約課程"><i class="fa-solid fa-user lesson--reserved"></i></a>
+                            </td>
+                            <td>
+                                <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="標準課程(可預約)"><i class="fa-solid fa-check lesson--standard"></i></a>
+                            </td>
+                            <td>
+                                <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="自由課程(可預約)"><i class="fa-solid fa-check lesson--free"></i></a>
+                            </td>
+                            <td>
+                                <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="優惠課程(可預約)"><i class="fa-solid fa-check lesson--discount"></i></a>
+                            </td>
+                            <td>
+                                <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="活動課程(可預約)"><i class="fa-solid fa-check lesson--event"></i></a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>00:30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>01:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>01:30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>02:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>02:30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div><!-- END .timetable-list -->
             </section>
 
             <section class="evaluate">
@@ -454,6 +562,36 @@
     </div>
     <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
 </footer>
+
+<!-- 取消預約popup -->
+<div class="popup-theme user-ex-detail" id="lesson-cancel">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">取消預約</h4>
+
+            
+        </div>
+    </div>
+</div>
+
+<!-- 預約課程popup -->
+<div class="popup-theme user-ex-detail" id="lesson-reserve">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">預約課程</h4>
+
+            
+        </div>
+    </div>
+</div>
 
 </body>
 
