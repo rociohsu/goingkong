@@ -1,37 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
 @import url("reset.css");
 @import url("hover-min.css");
-
-/* color */
-@color-cisbase: #634eb6;
-@color-cisbase-light: #e8e5f6;
-@color-white: #FFFFFF;
-@color-black: #000000;
-@color-yellow: #d8c035;
-@color-red: #b73434;
-@color-blue: #4e7ad2;
-@color-green: #09a268;
-@color-normal: #474747;
-@color-dark: #171717;
-@color-light: #979797;
-@color-lighter: #C4C4C4;
-@color-lightist: #eeecf5;
-
-/* font family */
-.font-family( @font-size: 14px ) {
-    font-family: 'Albert Sans', 'Noto Sans TC', 'Microsoft JhengHei', '黑體', sans-serif, serif;
-    font-size: @font-size; letter-spacing: 0.5px; -webkit-text-size-adjust: none; 
-}
-
-/* padding box */
-.padding-box() { 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
-}
-
-/* img url */
-@img-path: "../images/";
+@import url("setting");
 
 /* default */
 body { .font-family(15px); color: @color-normal; }
@@ -48,12 +18,14 @@ img { max-width: 100%; height: auto; }
     background: @color-cisbase; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); transition: 0.3s;
 }
 .basic-btn:hover { background: @color-red; }
+.basic-btn.gray { background: @color-light; }
+.basic-btn.gray:hover { background: @color-normal; }
 
 /* popup */
 .popup-theme { display: none;
     .popup-container { 
         display: flex; justify-content: center; align-items: center;
-        position: fixed; width: 100%; max-width: 600px; height: 90vh; left: 0; top: 0; right: 0; bottom: 0; padding: 15px; margin: 0 auto; z-index: 6;
+        position: fixed; width: 100%; max-width: 600px; height: 100vh; left: 0; top: 0; right: 0; bottom: 0; padding: 20px; margin: 0 auto; z-index: 6;
 
         .overlay-bg, .overlay-bg-x { 
             position: fixed; width: 100%; height: 100%; left: 0; top: 0; right: 0; bottom: 0;
@@ -70,12 +42,14 @@ img { max-width: 100%; height: auto; }
         .popup-content { position: relative; width: 100%; max-height: 100%; margin: 0 auto; padding: 20px;
             background: @color-white; border-radius: 25px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 6; overflow: auto; z-index: 8;
 
-            h2 { color: @color-cisbase; font-size: 18px; font-weight: bold; }
-            h3 { color: @color-normal; font-size: 18px; font-weight: normal; }
+            h2 { color: @color-cisbase; font-size: 20px; font-weight: bold; }
+            h3 { color: @color-normal; font-size: 16px; font-weight: normal; }
             h4 { color: @color-normal; font-size: 24px; 
                 padding-bottom: 10px; border-bottom: 1px solid @color-light; 
             }
             p { margin: 15px 0; color: @color-normal; }
+
+            .buttons { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; margin-top: 20px; }
         }
     }
 }

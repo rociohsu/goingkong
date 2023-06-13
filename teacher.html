@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/standard.css">
     <link rel="stylesheet" href="css/teacher.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
@@ -169,11 +170,11 @@
                 <div class="lg-react-element">
                     <a href="images/album1.jpg"><img width="160" height="160" src="images/album1.jpg"></a>
 
-                    <a href="images/album2.jpg"><img width="160" height="160" src="images/album1.jpg"></a>
+                    <a href="images/album2.jpg"><img width="160" height="160" src="images/album2.jpg"></a>
 
                     <a href="images/album1.jpg"><img width="160" height="160" src="images/album1.jpg"></a>
 
-                    <a href="images/album2.jpg"><img width="160" height="160" src="images/album1.jpg"></a>
+                    <a href="images/album2.jpg"><img width="160" height="160" src="images/album2.jpg"></a>
 
                     <a href="images/album1.jpg"><img width="160" height="160" src="images/album1.jpg"></a>
                 </div>
@@ -230,25 +231,17 @@
                 </div>
             </section>
 
-            <section class="textbook">
-                <h2>教材</h2>
-
-                <a class="textbook-list hvr-glow" href="#">
-                    <i class="fa-solid fa-thumbs-up"></i> 自由對談
-                </a>
-
-                <a class="textbook-list hvr-glow" href="#">
-                    <i class="fa-solid fa-thumbs-up"></i> 每日新聞
-                </a>
-
-                <a class="textbook-list hvr-glow" href="#">
-                    <i class="fa-solid fa-thumbs-up"></i> 兒童教材
-                </a>
+            <section class="skill">
+                <h2>技能</h2>
+                <div class="skill-list">
+                    <div>小提琴 Violin</div>
+                    <div>母語講師 Native Speaker</div>
+                    <div>鋼琴 Piano</div>
+                </div>
             </section>
 
             <div class="tabs">
                 <a rel="panel-educational" class="current">學歷</a>
-                <a rel="panel-skill">技能</a>
                 <a rel="panel-work">工作經驗</a>
                 <a rel="panel-license">證照/執照</a>
                 <a rel="panel-interest">興趣</a>
@@ -275,17 +268,6 @@
                             <div>Communication</div>
                             <time>2010.9 ~ 2014.6</time>
                         </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="panel panel-skill">
-                <section class="skill">
-                    <h2>技能</h2>
-                    <div class="skill-list">
-                        <div>小提琴 Violin</div>
-                        <div>母語講師 Native Speaker</div>
-                        <div>鋼琴 Piano</div>
                     </div>
                 </section>
             </div>
@@ -325,6 +307,22 @@
                     </div>
                 </section>
             </div>
+
+            <section class="textbook">
+                <h2>教材</h2>
+
+                <a class="textbook-list hvr-glow" href="#">
+                    <i class="fa-solid fa-thumbs-up"></i> 自由對談
+                </a>
+
+                <a class="textbook-list hvr-glow" href="#">
+                    <i class="fa-solid fa-thumbs-up"></i> 每日新聞
+                </a>
+
+                <a class="textbook-list hvr-glow" href="#">
+                    <i class="fa-solid fa-thumbs-up"></i> 兒童教材
+                </a>
+            </section>
 
             <section class="timetable" id="timetable">
                 <h2>預約上課</h2>
@@ -564,7 +562,7 @@
 </footer>
 
 <!-- 取消預約popup -->
-<div class="popup-theme user-ex-detail" id="lesson-cancel">
+<div class="popup-theme lesson-cancel" id="lesson-cancel">
     <div class="popup-container">
         <div class="overlay-bg"></div>
 
@@ -573,13 +571,35 @@
 
             <h4 align="center">取消預約</h4>
 
-            
+            <div class="teacher-list">
+                <div class="head-pic">
+                    <div><img src="images/headpic.jpg"></div>
+                </div>
+                <div class="teacher-info">
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <time>預約時間
+                        <div>2023年6月14日 星期三 12:00</div>
+                    </time>
+                </div>
+            </div>
+
+            <h2 align="center">確認是否取消？</h2>
+            <h3 align="center">課程前24小時以上取消,將退還課程券</h3>
+
+            <div class="buttons">
+                <button class="basic-btn gray popup-close">關閉</button>
+                <button class="basic-btn popup-close">確定取消</button>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- 預約課程popup -->
-<div class="popup-theme user-ex-detail" id="lesson-reserve">
+<div class="popup-theme lesson-reserve" id="lesson-reserve">
     <div class="popup-container">
         <div class="overlay-bg"></div>
 
@@ -588,7 +608,58 @@
 
             <h4 align="center">預約課程</h4>
 
-            
+            <div class="teacher-list">
+                <div class="head-pic">
+                    <div><img src="images/headpic.jpg"></div>
+                </div>
+                <div class="teacher-info">
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <time>預約時間
+                        <div>2023年6月14日 星期三 12:00</div>
+                    </time>
+                </div>
+            </div>
+
+            <div class="lesson-content">
+                <div class="lesson-detail">
+                    <h3>教材選擇</h3>
+
+                    <div class="lesson-textbook">
+                        <div class="select">
+                            <select>
+                                <option>自由對話</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+                        <div class="select">
+                            <select>
+                                <option>自由對談</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+
+                    <h3>課程需求</h3>
+                    <textarea placeholder="(選填)填寫本堂課程需求"></textarea>
+                </div>
+
+                <div class="lesson-textbook__preview">
+                    <img src="images/ex7.png">
+                </div>
+            </div>
+
+            <h2 align="center">確認是否預約standard課程?</h2>
+            <h3 align="center">扣除standard課程券</h3>
+
+            <div class="buttons">
+                <button class="basic-btn gray popup-close">關閉</button>
+                <button class="basic-btn popup-close">確定預約</button>
+            </div>
         </div>
     </div>
 </div>
