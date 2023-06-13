@@ -215,7 +215,7 @@
             .country-name { width: calc(100% - 30px); font-size: 14px; }
         }
         time { display: block; margin-top: 10px; 
-            > div { color: @color-cisbase; font-size: 20px; }
+            > div { color: @color-cisbase; font-size: 20px; white-space:pre-wrap; }
         }
     }
 }
@@ -227,8 +227,8 @@
         h3 { margin-bottom: 10px; }
         textarea { display: block; width: 100%; height: 100px; padding: 10px; background: @color-lightist; border-radius: 5px; }
         .lesson-textbook { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; margin-bottom: 30px;
-            .select { position: relative; width: 48%; padding: 5px; border: 1px solid @color-lighter; border-radius: 5px; 
-                > select { width: 100%; }
+            .select { position: relative; width: 48%; 
+                > select { width: 100%; padding: 5px; border: 1px solid @color-lighter; border-radius: 5px;  background: none; }
                 > i { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
                     position: absolute; width: 24px; height: 100%; top: 0; bottom: 0; right: 0; margin: auto 0; padding: 5px; border-left: 1px solid @color-lighter; pointer-events: none;
                 }
@@ -272,6 +272,12 @@
 
     .timetable-list { overflow-x: auto; 
         table thead tr td { top: 0; }
+    }
+
+    .teacher-list { 
+        .head-pic { 
+            > div { width: 80px; height: 80px; }
+        }
     }
 
     .lesson-content { flex-flow: wrap; 
