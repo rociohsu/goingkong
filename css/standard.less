@@ -25,7 +25,7 @@ img { max-width: 100%; height: auto; }
 .popup-theme { display: none;
     .popup-container { 
         display: flex; justify-content: center; align-items: center;
-        position: fixed; width: 100%; max-width: 600px; height: 100vh; left: 0; top: 0; right: 0; bottom: 0; padding: 20px; margin: 0 auto; z-index: 6;
+        position: fixed; width: 100%; max-width: 600px; height: 100vh; height: calc(var(--vh, 1vh) * 100); left: 0; top: 0; right: 0; bottom: 0; padding: 20px; margin: 0 auto; z-index: 6;
 
         .overlay-bg, .overlay-bg-x { 
             position: fixed; width: 100%; height: 100%; left: 0; top: 0; right: 0; bottom: 0;
@@ -144,7 +144,7 @@ footer { padding: 25px; text-align: center; background: @color-white; border-top
 }
 
 /* 內容區 */
-.container { min-height: calc(100vh - 85px); margin: 0 auto; padding-bottom: 5vh; background: @color-lightist;
+.container { margin: 0 auto; padding-bottom: 50px; background: @color-lightist;
     h2 { margin-bottom: 15px; padding: 20px 10px; color: @color-cisbase; font-size: 32px; font-weight: bold; text-align: center;}
 }
 
