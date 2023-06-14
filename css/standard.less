@@ -4,7 +4,7 @@
 @import url("setting");
 
 /* default */
-body { .font-family(15px); color: @color-normal; }
+body { color: @color-normal; .font-family(16px); }
 body * { .padding-box(); }
 a, button, select { cursor: pointer; }
 a { color: @color-cisbase; }
@@ -14,7 +14,7 @@ input:-webkit-autofill { box-shadow: 0 0 0px 1000px @color-white inset !importan
 img { max-width: 100%; height: auto; }
 .basic-btn { 
     display: inline-block; margin: 10px; padding: 10px 30px; .font-family(18px); 
-    color: @color-white; 
+    color: @color-white; white-space: nowrap;
     background: @color-cisbase; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); transition: 0.3s;
 }
 .basic-btn:hover { background: @color-red; }
@@ -137,8 +137,8 @@ footer { padding: 25px; text-align: center; background: @color-white; border-top
     .social-links { margin: 20px auto;
         > a { display: inline-block; margin: 0 10px; font-size: 24px; color: @color-cisbase; }
     }
-    .web-links > a { display: inline-block; margin: 0 10px; }
-    .web-links > a::after { content: '|'; display: inline-block; margin-left: 25px; color: @color-light; }
+    .web-links > a { display: inline-block; margin: 0 5px; }
+    .web-links > a::after { content: '|'; display: inline-block; margin-left: 15px; color: @color-light; }
     .web-links > a:last-child::after { display: none; } 
     .copyright { margin-top: 10px; font-size: 11px; color: @color-normal; }
 }

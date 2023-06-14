@@ -30,11 +30,13 @@ $(function() {
     $('a.popup').click(function(){
         var id = $(this).attr('rel');
         $('#'+id).show();
+        $('html').css('overflow','hidden');
     });
 
     /* close popup */
     $('.popup-theme .overlay-bg, .popup-close-x, .popup-close').click(function() {
         $(this).closest('.popup-theme').hide();
+        $('html').css('overflow','inherit');
     });
 
     /* change panel */

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>GoingKong出來講</title>
+    <meta name="description" content="GoingKong出來講" />
+    <meta name="keywords" content="GoingKong出來講" />
+
+    <meta property="og:title" content="GoingKong出來講" />
+    <meta property="og:description" content="GoingKong出來講" />
+    <meta property="og:url" content="https://www.goingkong.com/" />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta property="og:type" content="website" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/teacher.css">
+    <link rel="stylesheet" href="css/room.css">
+
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+</head>
+
+<body>
+<div class="container room">
+    <div class="room-left">
+        <h1>
+            <b>自由對談</b> 
+            <a class="basic-btn popup" rel="lesson-change"><i class="fa-solid fa-book"></i> 變更教材</a>
+        </h1>
+
+        <div class="lesson-textbook-online">
+            <img src="images/textbook.jpg">
+        </div>
+    </div>
+
+    <div class="room-right">
+        <div class="videowrap">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/VvzB4uR3EjE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div align="center"><a class="basic-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> 退出教室</a></div>
+        </div>
+
+        <div class="chat-wrap">
+            <div class="chat-window">
+                <div class="chat-window-msg">
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                    <p>[系統訊息]：Spencer已加入對話</p>
+                </div>
+
+                <div class="chat-window-input">
+                    <input type="text" placeholder="請輸入訊息">
+                    <button class="basic-btn"><i class="fa-brands fa-rocketchat"></i> 送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- END .container.room -->
+
+<!-- 變更教材popup -->
+<div class="popup-theme lesson-change" id="lesson-change">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">變更教材</h4>
+
+            <div class="lesson-content">
+                <div class="lesson-detail">
+                    <div class="teacher-list">
+                        <div class="head-pic">
+                            <div><img src="images/headpic.jpg"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <div class="teacher-name">BiBi</div>
+                            <div class="country">
+                                <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                                <div class="country-name">馬來西亞  Malaysia</div>
+                            </div>
+                            <time>上課時間
+                                <div>2023年6月14日 星期三 12:00</div>
+                            </time>
+                        </div>
+                    </div>
+                    
+                    <h3>教材選擇</h3>
+
+                    <div class="lesson-textbook">
+                        <div class="select">
+                            <select>
+                                <option>自由對話</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+                        <div class="select">
+                            <select>
+                                <option>自由對談</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+
+                    <h3>課程需求</h3>
+                    <textarea placeholder="(選填)填寫本堂課程需求"></textarea>
+
+                    <h2 align="center">確認是否變更教材?</h2>
+                    <h3 align="center"><!-- 注意事項 --></h3>
+
+                    <div class="buttons">
+                        <button class="basic-btn gray popup-close">關閉</button>
+                        <button class="basic-btn popup-close">確定變更</button>
+                    </div>
+                </div>
+
+                <div class="lesson-textbook__preview">
+                    <img src="images/textbook.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
