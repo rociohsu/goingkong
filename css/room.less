@@ -1,7 +1,6 @@
 @import url("setting");
 
 /* 講師頁面 */
-body { overflow: hidden; }
 .container.room { min-height: 100dvh; /*min-height: calc(var(--vh, 1vh) * 100);*/ padding-bottom: 0; display: flex; flex-flow: nowrap; justify-content: space-between; background: @color-lightist; overflow: hidden;
     .room-left { width: 60%; height: 100dvh; /*height: calc(var(--vh, 1vh) * 100);*/ padding: 20px;
         > h1 { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
@@ -26,12 +25,11 @@ body { overflow: hidden; }
 
         .chat-wrap { display: flex; flex-flow: wrap; align-content: stretch; width: 100%; height: 60%;  padding: 0 20px 20px 20px;
             .chat-window { position: relative; width: 100%; height: calc(100% - 25px); background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 0 0 20px 20px; overflow: hidden; 
-                .chat-window-msg { height: calc(100% - 50px); padding: 15px; background: @color-cisbase-light; overflow: auto; }
+                .chat-window-msg { height: calc(100% - 50px); padding: 15px; overflow: auto; }
                 .chat-window-input { position: sticky; width: 100%; height: 50px; left: 0; right: 0; bottom: 0; 
                     display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
-                    background: @color-white; 
-                    input { width: 100%; height: 100%; padding-left: 15px; }
-                    .basic-btn { height: 100%; margin: 0; border-radius: 0; box-shadow: none; }
+                    input { width: 100%; height: 100%; padding-left: 15px; background: @color-cisbase-light; border-radius: 0 0 0 20px; }
+                    .basic-btn { height: 100%; margin: 0; border-radius: 0 0 20px 0; box-shadow: none; }
                 }
             }
         }
@@ -39,6 +37,28 @@ body { overflow: hidden; }
 }
 
 .lesson-change .popup-container { max-width: 100%; }
+
+.chat-window-msg { 
+    > div { display: flex; flex-flow: wrap; margin-bottom: 15px; 
+        .msg-content { max-width: calc(100% - 50px); margin-left: 10px; padding: 10px 15px; background: @color-cisbase-light; border-radius: 20px; }
+        time { width: 100%; padding: 5px 0 0 65px; font-size: 12px; color: @color-light; } 
+    }
+    .sys-msg { 
+        .sys-msg-tag { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center;
+            width: 40px; height: 40px; color: @color-light; font-size: 14px; background: @color-lightist; border-radius: 99em; }
+        .msg-content { color: @color-light; font-size: 14px; background: @color-lightist; }
+    }
+    .otherside-msg {
+        .head-pic { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center;
+            width: 40px; height: 40px; border-radius: 99em; overflow: hidden; 
+            > img { width: 100%; height: 100%; object-fit: cover; }
+        }
+    }
+    .myself-msg { justify-content: flex-end; 
+        .msg-content { margin: 0; color: @color-white; background: @color-cisbase; }
+        time { padding: 5px 15px 0 0; text-align: right; }
+    }
+}
 
 @media (max-width: 820px) {
     body { overflow: auto; }
@@ -60,6 +80,56 @@ body { overflow: hidden; }
                 .chat-window { height: auto; 
                     .chat-window-msg { height: 280px; }
                 }
+            }
+        }
+    }
+}
+
+/* 聊天室頁面 */
+.container.chat { padding: 20px; background: @color-white;
+    .chat-wrap { width: 100%; height: 75dvh; margin: 0 auto; 
+        display: flex; flex-flow: nowrap; justify-content: space-between; background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 20px; overflow: hidden; }
+    .chat-left { width: 30%; height: 100%;
+        border-right: 1px solid @color-lighter; background: @color-cisbase-light; overflow: auto; 
+
+        .chat-list { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+            width: 100%; padding: 20px; 
+            border-bottom: 1px solid @color-lighter; cursor: pointer;
+            
+            .head-pic { display: block; position: relative; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                width: 90px; height: 90px;
+                border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; 
+                .hover-icon { position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0,0,0,0.2);
+                    display: flex; flex-flow: nowrap; justify-content: center; align-items: center; color: @color-white; font-size: 24px; opacity: 0; transition: 0.5s;
+                }
+            }
+            .head-pic:hover .hover-icon { opacity: 1; }
+
+            .profile-info { width: calc(100% - 105px); color: @color-dark;
+                .tearher-spec { text-align: right;
+                    > b { display: inline-block; padding: 2px 8px; color:  @color-cisbase; font-size: 14px; border: 1px solid @color-cisbase; border-radius: 5px; }
+                }
+                .teacher-name { margin-bottom: 5px; font-size: 18px; font-weight: bold; }
+                .country { margin: 5px auto; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+                    .country-flag { width: 20px; margin-right: 5px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
+                    .country-name { width: calc(100% - 25px); font-size: 14px; }
+                }
+                .last-msg { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: flex-end;
+                    color: @color-normal; font-size: 14px; 
+                    > span { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+                    > time { margin-left: 10px; font-size: 12px; }
+                }
+            }
+        }
+        .chat-list.current { background: @color-white; }
+    }
+    .chat-right { width: 70%; 
+        .chat-window { position: relative;
+            .chat-window-msg { height: calc(75dvh - 50px); padding: 20px; overflow: auto; }
+            .chat-window-input { position: sticky; width: 100%; height: 50px; left: 0; right: 0; bottom: 0; 
+                display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+                input { width: 100%; height: 100%; padding-left: 15px; background: @color-cisbase-light; border-radius: 0; }
+                .basic-btn { height: 100%; margin: 0; border-radius: 0; box-shadow: none; }
             }
         }
     }

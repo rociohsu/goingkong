@@ -21,6 +21,9 @@
     }
 
     .profile-info { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+        .tearher-spec { margin-bottom: 5px; text-align: right;
+            > b { display: inline-block; padding: 2px 8px; color:  @color-cisbase; font-size: 14px; border: 1px solid @color-cisbase; border-radius: 5px; }
+        }
         .teacher-name { margin-bottom: 5px; font-size: 18px; font-weight: bold; }
         .years-old > * { display: inline-block;  }
         .birthday { margin-right: 10px; }
@@ -47,7 +50,7 @@
 }
 
 .sys-btn-icon { width: 100%; max-width: 1440px; margin: 20px auto; display: flex; flex-flow: nowrap; justify-content: space-around; align-items: center; 
-    background: @color-white; border-bottom: 1px solid @color-lightist; z-index: 1;
+    background: @color-white; border-bottom: 1px solid @color-cisbase-light; z-index: 1;
 
     > * { padding: 10px 10px 15px 10px; text-align: center; 
         > i { padding: 5px; font-size: 24px; }   
@@ -64,7 +67,7 @@
     }
 }
 
-.videowrap { width: 100%; margin: 0 auto 20px auto; 
+.videowrap { width: 100%; margin: 0 auto 20px auto;
     .video { position: relative; width: 100%; height: 0; padding-top: 56.25%; /*16:9*/ }
     .video iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
 }
