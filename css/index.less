@@ -1,7 +1,7 @@
 @import url("setting");
 
 /* 首頁 */
-.index section:not(.mainkv) { padding: 2% 5%; }
+.container.index section:not(.mainkv) { padding: 2% 5%; }
 .mainkv {
    > img { display: block; margin: 0 auto; }
    .mobile { display: none; }
@@ -33,14 +33,20 @@
     }
 
 }
+
+.top-teacher {
+    .basic-btn { 
+        margin: 10px; padding: 10px 30px; font-size: 20px;
+    }
+}
  
 .teacher-list { display: flex; flex-flow: wrap; justify-content: stretch; align-items: stretch;
-    > a { width: calc(20% - 20px); margin: 0 10px 20px 10px; padding: 20px; color: @color-normal; background: @color-white; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
-        .head-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; }
+    > a { width: calc(20% - 20px); margin: 0 10px 20px 10px; padding: 20px; color: @color-normal; background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+        .head-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; overflow: hidden; }
         .teacher-name { margin: 10px 0; font-size: 18px; font-weight: bold; text-align: center; }
-        .country { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-            .country-flag { width: 24px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
-            .country-name { width: calc(100% - 30px); font-size: 14px; }
+        .country { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+            .country-flag { width: 24px; margin-right: 5px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
+            .country-name { font-size: 14px; }
         }
     }
 }
@@ -88,9 +94,8 @@
 
     .teacher-list { 
         > a { width: calc(50% - 8px); margin: 0 8px 16px 8px; 
-            .country { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-                .country-flag { width: 20px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
-                .country-name { width: calc(100% - 30px); font-size: 12px; }
+            .country { 
+                .country-flag { width: 20px; }
             }
         }
         > a:nth-child(even) { margin-right: 0; }

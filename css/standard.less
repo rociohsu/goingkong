@@ -13,13 +13,42 @@ select, input, textarea, button { .font-family(16px); }
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px @color-white inset !important; }
 img { max-width: 100%; height: auto; }
 .basic-btn { 
-    display: inline-block; margin: 10px; padding: 10px 30px; .font-family(18px); 
+    display: inline-block; margin: 8px; padding: 7px 24px; .font-family(18px); 
     color: @color-white; white-space: nowrap;
     background: @color-cisbase; border-radius: 30px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); transition: 0.3s;
 }
 .basic-btn:hover { background: @color-red; }
 .basic-btn.gray { background: @color-light; }
 .basic-btn.gray:hover { background: @color-normal; }
+
+/* loading */
+.loading { margin: 10% auto; text-align: center; }
+.loader {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    background: @color-white;
+    box-shadow: -20px 0 @color-white, 20px 0 @color-white;
+    box-sizing: border-box;
+    animation: shadowPulse 1s linear infinite;
+}
+@keyframes shadowPulse {
+    33% {
+      background: @color-white;
+      box-shadow: -20px 0 @color-cisbase, 20px 0 @color-white;
+    }
+    66% {
+      background: @color-cisbase;
+      box-shadow: -20px 0 @color-white, 20px 0 @color-white;
+    }
+    100% {
+      background: @color-white;
+      box-shadow: -20px 0 @color-white, 20px 0 @color-cisbase;
+    }
+}
 
 /* popup */
 .popup-theme { display: none; 
@@ -169,4 +198,14 @@ footer { padding: 25px 15px; text-align: center; background: @color-white;
     .container {
         h2 { font-size: 24px; }
     }
+}
+
+/* 頁碼 */
+.pager { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+    margin: 20px auto 0 auto;
+    > a { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+        width: 36px; height: 36px; padding: 5px; margin: 0 3px; font-size: 18px; background: @color-white; border-radius: 99em; 
+    }
+    > a:hover { border: 1px solid @color-cisbase; }
+    > a.current { color: @color-white; background: @color-cisbase; cursor: text; }
 }

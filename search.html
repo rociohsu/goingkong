@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>GoingKong出來講</title>
+    <meta name="description" content="GoingKong出來講" />
+    <meta name="keywords" content="GoingKong出來講" />
+
+    <meta property="og:title" content="GoingKong出來講" />
+    <meta property="og:description" content="GoingKong出來講" />
+    <meta property="og:url" content="https://www.goingkong.com/" />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta property="og:type" content="website" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/search.css">
+
+    <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="header-l">
+        <div class="logo"><a href="index.html"><img src="images/GoingKong-logo.png"></a></div>
+        <nav>
+            <div class="nav-second-open">學習 <i class="fa-solid fa-angle-down"></i>
+
+                <div class="nav-second">
+                    <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>預約列表</b></a></div>
+                    <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>上課記錄</b></a></div>
+                    <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>課後訊息</b></a></div>
+                    <div><a href="#"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a></div>
+                    <div>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i> <b>上課需求</b>
+                            <p>上課需求，會在上課時顯示讓講師了解</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div><a href="search.html">搜尋講師</a></div>
+            <div><a href="#">講師排行榜</a></div>
+            <div><a href="#">教材</a></div>
+        </nav>
+    </div>
+    <div class="menu">
+        <div class="menu-r">
+            <div class="menu-r-mobile menu-r-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
+            <div class="menu-r-mobile user-name">
+                <b>cww20811ss@gmail.com</b><br>
+                歡迎光臨!
+            </div>
+            <div class="menu-r-second">
+                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>個人資料設定</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程購買</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>購買記錄</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>可用課程券</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程券記錄</b></a>
+            </div>
+            <br>
+            <div class="menu-r-btn"><a href="#">註冊</a></div>
+            <div class="menu-r-btn"><a href="#">登入</a></div>
+            <div class="menu-r-mobile menu-r-btn"><a href="#">登出</a></div>
+        </div>
+
+        <a class="bar-cart" href="#"><i class="fa-solid fa-cart-shopping"></i><!-- 購物車 --></a>
+        <div class="bar-mobile"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
+    </div>
+</header>
+
+<div class="container search">
+    <div class="search-wrap">
+        <div class="search-box">
+        <form action="search.html">
+            <div class="search-box__title">搜尋講師：
+                <input type="text" placeholder="請輸入講師名，可輸入關鍵字">
+            </div>
+            <div class="search-box__option">
+                <div class="search-box__title">進階選項</div>
+                <div>
+                    <div class="option__name">國家：</div>
+                    <div class="option__content">
+                        <a class="basic-btn popup" rel="choose-country">選擇國家</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="option__name">性別：</div>
+                    <div class="option__content">
+                        <input name="sex" id="sex0" type="radio" value="" checked>
+                        <label for="sex0"><span class="icon"><i class="fa-solid fa-check"></i></span>不指定</label>
+
+                        <input name="sex" id="sex1" type="radio" value="">
+                        <label for="sex1"><span class="icon"><i class="fa-solid fa-check"></i></span>男性</label>
+
+                        <input name="sex" id="sex2" type="radio" value="">
+                        <label for="sex2"><span class="icon"><i class="fa-solid fa-check"></i></span>女性</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="option__name">年齡：</div>
+                    <div class="option__content">
+                        <input name="year" id="year0" type="checkbox" value="">
+                        <label for="year0"><span class="icon"><i class="fa-solid fa-check"></i></span>所有年齡層</label>
+
+                        <input name="year" id="year1" type="checkbox" value="">
+                        <label for="year1"><span class="icon"><i class="fa-solid fa-check"></i></span>~19歲</label>
+
+                        <input name="year" id="year2" type="checkbox" value="">
+                        <label for="year2"><span class="icon"><i class="fa-solid fa-check"></i></span>20多歲</label>
+
+                        <input name="year" id="year3" type="checkbox" value="">
+                        <label for="year3"><span class="icon"><i class="fa-solid fa-check"></i></span>30多歲</label>
+
+                        <input name="year" id="year4" type="checkbox" value="">
+                        <label for="year4"><span class="icon"><i class="fa-solid fa-check"></i></span>40多歲</label>
+
+                        <input name="year" id="year5" type="checkbox" value="">
+                        <label for="year5"><span class="icon"><i class="fa-solid fa-check"></i></span>50歲~</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="option__name">特色：</div>
+                    <div class="option__content">
+                        <input name="spec" id="spec0" type="checkbox" value="">
+                        <label for="spec0"><span class="icon"><i class="fa-solid fa-check"></i></span>母語講師</label>
+
+                        <input name="spec" id="spec1" type="checkbox" value="">
+                        <label for="spec1"><span class="icon"><i class="fa-solid fa-check"></i></span>非母語講師</label>
+
+                        <input name="spec" id="spec2" type="checkbox" value="">
+                        <label for="spec2"><span class="icon"><i class="fa-solid fa-check"></i></span>擅長自由會話</label>
+
+                        <input name="spec" id="spec3" type="checkbox" value="">
+                        <label for="spec3"><span class="icon"><i class="fa-solid fa-check"></i></span>適合兒童</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="option__name">我的最愛：</div>
+                    <div class="option__content">
+                        <input name="favorite" id="favorite" type="checkbox" value="">
+                        <label for="favorite"><span class="icon"><i class="fa-solid fa-check"></i></span>只顯示已收藏的講師</label>
+                    </div>
+                </div>
+            </div><!-- END .search-box__option -->
+            <div class="search-box__btn">
+                <button class="basic-btn gray" type="reset">重設</button>
+                <button class="basic-btn" type="submit">搜尋</button>
+            </div>
+        </form>
+        </div><!-- END .search-box -->
+
+        <h2 align="center">講師列表</h2>
+        <h4 align="center">找到 10 位講師</h4>
+
+        <div class="loading">
+            <span class="loader"></span>
+            <span>Loading</span>
+        </div>
+
+        <div class="teacher-list">
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <b>4.5</b>
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a>
+            
+                    <!-- 我的最愛 已加入 -->
+                    <!-- <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a> -->
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <b>4.5</b>
+                        <!-- <span>收集中</span> -->
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a>
+            
+                    <!-- 我的最愛 已加入 -->
+                    <!-- <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a> -->
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <!-- <b>4.5</b> -->
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <!-- <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a> -->
+            
+                    <!-- 我的最愛 已加入 -->
+                    <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a>
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <!-- <b>4.5</b> -->
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <!-- <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a> -->
+            
+                    <!-- 我的最愛 已加入 -->
+                    <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a>
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <!-- <b>4.5</b> -->
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <!-- <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a> -->
+            
+                    <!-- 我的最愛 已加入 -->
+                    <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a>
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <!-- <b>4.5</b> -->
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <!-- <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a> -->
+            
+                    <!-- 我的最愛 已加入 -->
+                    <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a>
+                </a>
+            </div>
+
+            <div class="teacher-list__intro">
+                <a class="hvr-glow" href="teacher.html">
+                    <div class="head-pic"><img src="images/headpic.jpg"></div>
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <div class="star-score">
+                        <i class="fa-solid fa-star"></i>
+                        <!-- <b>4.5</b> -->
+                        <span>收集中</span>
+                    </div>
+                    <div class="lession-num">自由課堂數 <b>2</b></div>
+                    <div class="lession-num">總課堂數 <b>4</b></div>
+                    <!-- 我的最愛 未加入 -->
+                    <!-- <a class="add-favorite hvr-grow"><i class="fa-regular fa-heart gray"></i></a> -->
+            
+                    <!-- 我的最愛 已加入 -->
+                    <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a>
+                </a>
+            </div>
+        </div><!-- END .teacher-list -->
+
+        <div class="pager">
+            <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+            <a class="current" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <span>...</span>
+            <a href="#">10</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </div><!-- END .search-wrap -->
+</div><!-- END .container.search -->
+
+<footer>
+    <div class="social-links">
+        <a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="web-links">
+        <a href="#">使用條款</a>
+        <a href="#">支援與服務</a>
+        <a href="#">常見問題</a>
+    </div>
+    <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
+</footer>
+
+<!-- 選擇國家popup -->
+<div class="popup-theme choose-country" id="choose-country">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">選擇國家</h4>
+
+            <div class="country-group">
+                <h2>亞洲</h2>
+
+                <div class="country-list">
+                    <input name="country" id="country1" type="checkbox" value="">
+                    <label for="country1"><span class="icon"><i class="fa-solid fa-check"></i></span>Taiwan 台灣</label>
+
+                    <input name="country" id="country2" type="checkbox" value="">
+                    <label for="country2"><span class="icon"><i class="fa-solid fa-check"></i></span>Japan 日本</label>
+
+                    <input name="country" id="country3" type="checkbox" value="">
+                    <label for="country3"><span class="icon"><i class="fa-solid fa-check"></i></span>South Korea 南韓</label>
+
+                    <input name="country" id="country4" type="checkbox" value="">
+                    <label for="country4"><span class="icon"><i class="fa-solid fa-check"></i></span>Taiwan 台灣</label>
+
+                    <input name="country" id="country5" type="checkbox" value="">
+                    <label for="country5"><span class="icon"><i class="fa-solid fa-check"></i></span>Japan 日本</label>
+
+                    <input name="country" id="country6" type="checkbox" value="">
+                    <label for="country6"><span class="icon"><i class="fa-solid fa-check"></i></span>South Korea 南韓</label>
+                </div>
+            </div><!-- END .country-group -->
+
+            <div class="country-group">
+                <h2>歐洲</h2>
+
+                <div class="country-list">
+                    <input name="country" id="country7" type="checkbox" value="">
+                    <label for="country7"><span class="icon"><i class="fa-solid fa-check"></i></span>Taiwan 台灣</label>
+
+                    <input name="country" id="country8" type="checkbox" value="">
+                    <label for="country8"><span class="icon"><i class="fa-solid fa-check"></i></span>Japan 日本</label>
+
+                    <input name="country" id="country9" type="checkbox" value="">
+                    <label for="country9"><span class="icon"><i class="fa-solid fa-check"></i></span>South Korea 南韓</label>
+
+                    <input name="country" id="country10" type="checkbox" value="">
+                    <label for="country10"><span class="icon"><i class="fa-solid fa-check"></i></span>Taiwan 台灣</label>
+
+                    <input name="country" id="country11" type="checkbox" value="">
+                    <label for="country11"><span class="icon"><i class="fa-solid fa-check"></i></span>Japan 日本</label>
+
+                    <input name="country" id="country12" type="checkbox" value="">
+                    <label for="country12"><span class="icon"><i class="fa-solid fa-check"></i></span>South Korea 南韓</label>
+                </div>
+            </div><!-- END .country-group -->
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
