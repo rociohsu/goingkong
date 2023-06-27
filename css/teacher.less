@@ -62,7 +62,7 @@
     .other-btn { position: relative; color: @color-cisbase; cursor: pointer; }
     .other-btn:hover .sys-btn-second { display: block;
         position: absolute; width: 120px; top: 40px; right: 5px; background: @color-white; border: 1px solid @color-lighter; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 1;
-        > a { display: block; padding: 10px 15px; }
+        > a { display: block; padding: 10px 15px; white-space: nowrap; }
         > a:hover { color: @color-white; background: @color-cisbase; }
     }
 }
@@ -77,10 +77,13 @@
 }
 
 .album {
-    .lg-react-element { display: flex; flex-flow: wrap; justify-content: stretch; max-height: 160px; overflow: hidden;
-        > a { display: inline-block; width: calc(20% - 5px); margin-right: 5px;
+    .lg-react-element { display: flex; flex-flow: wrap; justify-content: stretch; align-items: stretch; max-height: 330px; overflow: hidden;
+        > a { position: relative; display: block; width: 20%; height: 165px; padding: 0 5px 5px 0; overflow: hidden;
             > img { width: 100%; height: 160px; object-fit: cover; }
         }
+        > a:nth-child(10)::after { display: block; content: '+'; position: absolute; width: calc(100% - 5px); height: calc(100% - 5px); top: -5px; bottom: 0; left: -5px; right: 0; margin: auto; 
+            display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+            color: @color-white; font-size: 36px; background: rgba(0,0,0,0.75); }
     }
 }
 
@@ -267,8 +270,8 @@
         }
     }
 
-    .album .lg-react-element { max-height: 120px;
-        > a { width: calc(33.3% - 5px); 
+    .album .lg-react-element { max-height: 625px;
+        > a { width: 50%; height: 125px;
             > img { height: 120px; }
         }
     }
