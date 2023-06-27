@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/room.css">
+    <link rel="stylesheet" href="css/member.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -85,105 +85,38 @@
     </div>
 </header>
 
-<div class="container chat">
-    <div class="chat-wrap">
-        <div class="chat-left">
-            <div class="chat-list hvr-glow current">
-                <a class="head-pic" target="_blank" href="teacher.html">
-                    <img src="images/headpic.jpg">
-                    <div class="hover-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                </a>
-                
-                <a class="profile-info">
-                    <div class="tearher-spec"><b>小孩專家</b></div>
-                    <div class="teacher-name">BiBi</div>
-
-                    <div class="country">
-                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
-                        <div class="country-name">馬來西亞  Malaysia</div>
-                    </div>
-
-                    <div class="last-msg">
-                        <span>Hello! How are you?</span>
-                        <time>06/28</time>
-                    </div>
-                </a>
-            </div>
-
-            <div class="chat-list hvr-glow">
-                <a class="head-pic" target="_blank" href="teacher.html">
-                    <img src="images/headpic.jpg">
-                    <div class="hover-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                </a>
-                
-                <a class="profile-info">
-                    <div class="tearher-spec"><b>小孩專家</b></div>
-                    <div class="teacher-name">BiBi</div>
-
-                    <div class="country">
-                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
-                        <div class="country-name">馬來西亞  Malaysia</div>
-                    </div>
-
-                    <div class="last-msg">
-                        <span>Hello! How are you?</span>
-                        <time>06/28</time>
-                    </div>
-                </a>
-            </div>
-
-            <div class="chat-list hvr-glow">
-                <a class="head-pic" target="_blank" href="teacher.html">
-                    <img src="images/headpic.jpg">
-                    <div class="hover-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                </a>
-                
-                <a class="profile-info">
-                    <div class="tearher-spec"><b>小孩專家</b></div>
-                    <div class="teacher-name">BiBi</div>
-
-                    <div class="country">
-                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
-                        <div class="country-name">馬來西亞  Malaysia</div>
-                    </div>
-
-                    <div class="last-msg">
-                        <span>Hello! How are you?</span>
-                        <time>06/28</time>
-                    </div>
-                </a>
+<div class="container member">
+    <section class="login">
+        <h2>會員登入</h2>
+        <div class="form-row">
+            <div class="form-row__name">E-Mail帳號</div>
+            <div class="form-row__field">
+                <input type="email" placeholder="請輸入有效的E-Mail">
             </div>
         </div>
 
-        <div class="chat-right">
-            <div class="chat-window">
-                <div class="chat-window-msg">
-                    <div class="sys-msg">
-                        <div class="sys-msg-tag">系統</div>
-                        <div class="msg-content">Spencer已加入對話</div>
-                        <time>20:36</time>
-                    </div>
+        <div class="form-row focus">
+            <div class="form-row__name">密碼</div>
+            <div class="form-row__field">
+                <input type="password" placeholder="不含空白，6-30位英數字">
 
-                    <div class="otherside-msg">
-                        <div class="head-pic"><img src="images/headpic.jpg"></div>
-                        <div class="msg-content">Hello! How are you?</div>
-                        <time>20:36</time>
-                    </div>
-                    
-                    <div class="myself-msg">
-                        <div class="msg-content">I'm good! Nice to meet you.</div>
-                        <time>20:36</time>
-                    </div>
-                </div>
-
-                <div class="chat-window-input">
-                    <input type="text" placeholder="請輸入訊息...">
-                    <button class="basic-btn"><i class="fa-brands fa-rocketchat"></i> 送出</button>
-                </div>
+                <!-- 顯示密碼icon -->
+                <button class="icon-btn"><i class="fa-solid fa-eye"></i></button>
+                <!-- <button class="icon-btn"><i class="fa-sharp fa-solid fa-eye-slash"></i></button> -->
             </div>
-        </div><!-- END .chat-right -->
-    </div><!-- END .chat-wrap -->
-</div><!-- END .container.chat -->
+
+            <div class="error-msg"><i class="fa-solid fa-circle-exclamation"></i> 密碼輸入錯誤</div>
+        </div>
+
+        <button class="basic-btn">登入</button>
+
+        <div class="other-link">
+            <a href="register.html">註冊會員</a>
+            <span>|</span>
+            <a href="forget-pw.html">忘記密碼</a>
+        </div>
+    </section>
+</div><!-- END .container.member -->
 
 <footer>
     <div class="social-links">
