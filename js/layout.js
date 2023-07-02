@@ -29,14 +29,16 @@ $(function() {
     });
 
     if( $(window).width() > 820 ){
+        $('.menu-r.current').hide();
+
         /* open user-menu */
         $('.user-pic').click(function(){
-            $('.menu-r').addClass('current');
+            $('.menu-r.current').slideDown(500);
         });
 
         /* close user-menu */
         $('.menu-r-close, .container, footer').click(function(){
-            $('.menu-r').removeClass('current');
+            $('.menu-r.current').slideUp();
         });
     }
 
