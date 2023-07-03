@@ -294,5 +294,27 @@
             .lesson-detail { width: 100%; margin-bottom: 20px; }
             .lesson-textbook__preview { width: 100%; }
         }
+    } 
+}
+
+/* 評價頁面 */
+.container.review { padding-top: 40px; }
+.review-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 15px; 
+    .profile { width: 100%; padding: 20px; flex-flow: nowrap; justify-content: center; border-radius: 10px; background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+        .profile-info:not(.more) { margin-right: 20px; padding-right: 20px; border-right: 1px solid @color-cisbase-light; }
+        .profile-info.more {
+            .frequency {
+                > div { display: inline-block; margin-right: 20px; }
+            }
+        }
+    }
+    .evaluate-list { background: @color-white; }
+}
+
+@media (max-width: 820px) {
+    .review-wrap { 
+        .profile { flex-flow: wrap; 
+            .profile-info:not(.more) { margin-right: 0; padding-right: 0; border-right: none; }
+        }
     }
 }
