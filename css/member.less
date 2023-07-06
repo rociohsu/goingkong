@@ -19,8 +19,8 @@
             }
             .verify i { color: @color-green; }
             .no-verify i { color: @color-red; }
-            input[type=text], input[type=email], input[type=password], input[type=number] { width: 100%; height: 40px; padding: 5px 15px; border: 1px solid @color-light; border-radius: 5px; }
-            input[type=radio], input[type=checkbox] { display: none; }
+            input[type=text], input[type=email], input[type=password], input[type=number], select { width: 100%; height: 40px; padding: 5px 15px; border: 1px solid @color-light; border-radius: 5px; }
+            input[type=radio], input[type=checkbox], input[type=file] { display: none; }
             input[type=radio] + label, input[type=checkbox] + label { display: flex; flex-flow: nowrap; align-items: center; margin-right: 20px;
                 .icon { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
                     width: 20px; height: 20px; margin-right: 5px; border-radius: 99em; border: 3px solid @color-lighter; 
@@ -39,10 +39,23 @@
 
             .icon-btn { display: block; position: absolute; right: 0; top: 0; bottom: 0; margin: auto 0; padding: 5px 10px; color: @color-normal; background: none; }
             .icon-btn:hover { display: block; }
+            .icon-btn.select { pointer-events: none; }
+            .basic-btn { width: auto; max-width: auto; padding: 10px 25px; font-size: 16px; }
+            .basic-btn.gray { background: @color-lighter; cursor: text; }
+
+            .head-pic-upload { position: relative; width: 200px; margin: 0 auto;
+                .head-pic { position: relative; display: block;  width: 200px; height: 200px; 
+                    border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden;
+                    > img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; object-fit: cover; }
+                }
+                .edit { position: absolute; right: 0; bottom: 0; width: 50px; height: 50px; padding: 15px; background: @color-cisbase; border-radius: 99em; 
+                    > i { font-size: 20px; color: @color-white; }
+                }
+            }
         }
         .form-row__field.verify {
             input[type=text], input[type=email], input[type=password], input[type=number] { border-radius: 5px 0 0 5px; }
-            .basic-btn { height: 40px; padding: 0; margin: 0; border-radius: 0 5px 5px 0; box-shadow: none; }
+            .basic-btn { width: 70%; max-width: 200px; height: 40px; padding: 0; margin: 0; border-radius: 0 5px 5px 0; box-shadow: none; }
             .basic-btn.disabled { background: @color-lighter; cursor: text; }
         }
         .error-msg { margin-top: 5px; color: @color-red; text-align: left; }

@@ -104,22 +104,38 @@
     <section class="login">
         <h2>會員資料設定</h2>
         <div class="form-row">
+            <div class="form-row__field">
+                <input type="file" id="head-pic">
+                <label class="head-pic-upload" for="head-pic">
+                    <div class="head-pic">
+                        <img src="images/headpic.jpg">
+                    </div>
+                    <div class="edit"><i class="fa-solid fa-camera"></i></div>
+                </label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-row__name">E-Mail帳號</div>
+            <div class="form-row__field">
+                <input type="email" placeholder="請輸入有效的E-Mail" value="cww20811ss@gmail.com">
+
+                <span class="verify"><i class="fa-solid fa-circle-check"></i> 已驗證</span>
+            </div>
+        </div>
+
+        <div class="form-row">
             <div class="form-row__name">E-Mail帳號</div>
             <div class="form-row__field">
                 <input type="email" placeholder="請輸入有效的E-Mail">
-
-                <span class="verify"><i class="fa-solid fa-circle-check"></i> 已驗證</span>
 
                 <span class="no-verify"><i class="fa-solid fa-circle-exclamation"></i> 未驗證</span>
             </div>
         </div>
 
         <div class="form-row">
-            <div class="form-row__name">驗證碼</div>
-            <div class="form-row__field verify">
-                <input type="text">
-                <button class="basic-btn">發送驗證碼</button>
-                <!-- <button class="basic-btn disabled" disabled>60秒後再發送</button> -->
+            <div class="form-row__field">
+                <button class="basic-btn">重新發送驗證信</button>
+                <!-- <button class="basic-btn gray" disabled>60秒後再發送</button> -->
             </div>
         </div>
 
@@ -172,6 +188,18 @@
 
                 <!-- icon -->
                 <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__name">選擇時區</div>
+            <div class="form-row__field">
+                <select>
+                    <option>(GMT-10:00) Hawaii Time</option>
+                </select>
+
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 @import url("setting");
 
-/* 講師頁面 */
+/* 搜尋頁面 */
 .container.search { 
     .search-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 15px; }
 
@@ -12,7 +12,9 @@
 .teacher-list { display: flex; flex-flow: wrap; justify-content: stretch; align-items: stretch; padding-left: 0.7%;
     .teacher-list__intro {position: relative; width: calc(20% - 20px); margin: 0 10px 20px 10px; 
         > a:not(.add-favorite) { display: block; padding: 20px; color: @color-normal; background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
-            .head-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; overflow: hidden; }
+            .head-pic { position: relative; padding-bottom: 100%; overflow: hidden; 
+                > img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; object-fit: cover; }
+            }
             .teacher-name { margin: 10px 0; font-size: 18px; font-weight: bold; text-align: center; }
             .country { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
                 .country-flag { width: 24px; margin-right: 7px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
@@ -136,23 +138,29 @@
 /* 講師排行榜 */
 .container.teacher-rank { min-height: 80dvh;
     .rank-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 20px 15px 0 15px; 
-        .tabs { width: 90%; margin: 0 auto 30px auto; text-align: center; border-bottom: 1px solid @color-cisbase; 
+        h2 { padding: 0; }
+        .tabs { position: sticky; top: 80px; width: 100%; margin: 0 auto 30px auto; padding: 10px 15px 0 15px; text-align: center; border-bottom: 1px solid @color-cisbase; background: @color-lightist; z-index: 1;
             display: flex; flex-flow: nowrap; justify-content: space-between; align-items: flex-end;
             > a { width: 100%; padding: 10px 5px; font-size: 18px; border-radius: 10px 10px 0 0; }
             > a:hover { background: @color-cisbase-light; }
             a.current { color: @color-white; background: @color-cisbase; }
         }
 
-        .teacher-list { 
+        .teacher-list { counter-reset: num;
             .teacher-list__intro { width: calc(50% - 20px); 
                 > a:not(.add-favorite) { position: relative; padding: 40px 20px 40px 190px; 
-                    .head-pic { position: absolute; width: 160px; height: 160px; left: 20px; top: 20px; bottom: 0; margin: auto 0; border-radius: 99em; overflow: hidden; z-index: 0; }
+                    .head-pic { position: absolute; width: 160px; height: 160px; left: 20px; top: 20px; bottom: 0; margin: auto 0; padding-bottom: 0; border-radius: 99em; overflow: hidden; z-index: 0; }
                     .rank-title { position: absolute; left: 20px; top: 10px; font-size: 18px; font-weight: bold; z-index: 1;
-                        > i { font-size: 24px; color: @color-yellow; }
+                        > i { position: relative; font-size: 42px; color: @color-normal; }
+                        > i::after { display: block; counter-increment: num; content: counter(num); position: absolute; width: 100%; top: 5px; left: 0; font-size: 16px; color: @color-white; text-align: center; }
                     }
                     .teacher-name { margin-top: -5px; }
                 }
             }
+            .teacher-list__intro:nth-child(1) > a .rank-title > i { color: @color-yellow; }
+            .teacher-list__intro:nth-child(2) > a .rank-title > i { color: @color-green; }
+            .teacher-list__intro:nth-child(3) > a .rank-title > i { color: @color-blue; }
+            .teacher-list__intro:nth-child(4) > a .rank-title > i { color: @color-cisbase; }
         }
     }
 }
@@ -167,10 +175,7 @@
             .teacher-list { 
                 .teacher-list__intro { width: 100%; margin: 20px auto 0 auto;
                     > a:not(.add-favorite) { padding-left: 135px; 
-                        .head-pic { width: 100px; height: 100px; }
-                        .rank-title { top: 20px; font-size: 16px;
-                            > i { font-size: 20px; }
-                        }
+                        .head-pic { width: 100px; height: 100px; } 
                     }
                 }
             }
