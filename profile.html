@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/member.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -100,138 +100,91 @@
     </div>
 </header>
 
-<div class="container checkout">
-    <div class="checkout-wrap">
-        <h4>購買清單</h4>
-        <div class="lesson-list">
-            <a class="teacher-info" href="teacher.html">
-                <div class="head-pic"><img src="images/headpic.jpg"></div>
-                <div class="teacher-name">BiBi Chang</div>
-            </a>
-            <div class="lession-name">
-                <div>五堂 正式課</div>
-                <time>5堂 25分鐘</time>
-            </div>
-            <div class="price">5x TWD$ 100/堂</div>
-            <div class="subtotal">TWD$ 500</div>
-            <div class="sys-btn"><button class="basic-btn">刪除 <i class="fa-solid fa-circle-minus"></i></button></div>
-        </div>
+<div class="container member">
+    <section class="login">
+        <h2>會員資料設定</h2>
+        <div class="form-row">
+            <div class="form-row__name">E-Mail帳號</div>
+            <div class="form-row__field">
+                <input type="email" placeholder="請輸入有效的E-Mail">
 
-        <div class="lesson-list">
-            <a class="teacher-info" href="teacher.html">
-                <div class="head-pic"><img src="images/headpic.jpg"></div>
-                <div class="teacher-name">BiBi</div>
-            </a>
-            <div class="lession-name">
-                <div>五堂 正式課</div>
-                <time>5堂 25分鐘</time>
-            </div>
-            <div class="price">5x TWD$ 100/堂</div>
-            <div class="subtotal">TWD$ 500</div>
-            <div class="sys-btn"><button class="basic-btn">刪除 <i class="fa-solid fa-circle-minus"></i></button></div>
-        </div>
+                <span class="verify"><i class="fa-solid fa-circle-check"></i> 已驗證</span>
 
-        <div class="total">總計 TWD$ <b>1000</b></div>
-
-        <hr>
-
-        <h4>選擇付款方式</h4>
-        <div class="payment-way">
-            <input type="radio" name="payment" id="payment1" checked>
-            <label for="payment1">
-                <i class="fa-solid fa-credit-card"></i> 信用卡付款
-            </label>
-
-            <input type="radio" name="payment" id="payment2">
-            <label for="payment2">
-                <i class="fa-solid fa-cash-register"></i> 超商付款
-            </label>
-
-            <input type="radio" name="payment" id="payment3">
-            <label for="payment3">
-                <i class="fa-solid fa-money-bill-wave"></i> ATM付款
-            </label>
-        </div>
-
-        <div class="creditcard-field">
-            <div>
-                <div class="option__name">信用卡卡號：</div>
-                <div class="option__content creditcard-num">
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">僅接受：</div>
-                <div class="option__content creditcard-type">
-                    <!-- 如果偵測到是什麼信用卡，class加上current -->
-                    <img class="current" src="images/visa.png">
-                    <img src="images/mastercard.png">
-                    <img src="images/jcb.png">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">有效日期(月/年)：</div>
-                <div class="option__content">
-                    <input type="number" placeholder="mm" oninput="if(value.length>2)value=value.slice(0,2)"> / 
-                    <input type="number" placeholder="yy" oninput="if(value.length>2)value=value.slice(0,2)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">背面安全碼(3碼)：</div>
-                <div class="option__content">
-                    <input type="number" placeholder="000" oninput="if(value.length>3)value=value.slice(0,3)">
-                </div>
+                <span class="no-verify"><i class="fa-solid fa-circle-exclamation"></i> 未驗證</span>
             </div>
         </div>
 
-        <hr>
-
-        <h4>電子發票存入方式</h4>
-        <div class="invoice-type">
-            <input type="radio" name="invoice" id="invoice1" checked>
-            <label for="invoice1">
-                <i class="fa-solid fa-circle-user"></i> 會員載具
-            </label>
-
-            <input type="radio" name="invoice" id="invoice2">
-            <label for="invoice2">
-                <i class="fa-solid fa-barcode"></i> 手機載具
-            </label>
-        </div>
-
-        <div class="creditcard-field">
-            <!-- 如果有選手機載具才會出現輸入框供填寫 -->
-            <div class="mobile-carrier">
-                <div class="option__name">輸入手機載具：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text" placeholder="/0000000" oninput="if(value.length>8)value=value.slice(0,8)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">統一編號(選填)：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text" oninput="if(value.length>8)value=value.slice(0,8)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">統一編號抬頭(選填)：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text">
-                </div>
+        <div class="form-row">
+            <div class="form-row__name">驗證碼</div>
+            <div class="form-row__field verify">
+                <input type="text">
+                <button class="basic-btn">發送驗證碼</button>
+                <!-- <button class="basic-btn disabled" disabled>60秒後再發送</button> -->
             </div>
         </div>
 
-        <div align="center"><a class="basic-btn lg hvr-grow" href="checkout-finish.html">確認並同意支付 <i class="fa-solid fa-angle-right"></i></a></div>
-    </div><!-- END .checkout-wrap -->
-</div><!-- END .container.checkout -->
+        <div class="form-row focus">
+            <div class="form-row__name">密碼</div>
+            <div class="form-row__field">
+                <input type="password" placeholder="不含空白，6-30位英數字">
+
+                <!-- 顯示密碼icon -->
+                <button class="icon-btn"><i class="fa-solid fa-eye"></i></button>
+                <!-- <button class="icon-btn"><i class="fa-sharp fa-solid fa-eye-slash"></i></button> -->
+            </div>
+
+            <div class="error-msg"><i class="fa-solid fa-circle-exclamation"></i> 密碼輸入錯誤</div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__name">確認密碼</div>
+            <div class="form-row__field">
+                <input type="password" placeholder="再次輸入密碼">
+
+                <!-- 顯示密碼icon -->
+                <button class="icon-btn"><i class="fa-solid fa-eye"></i></button>
+                <!-- <button class="icon-btn"><i class="fa-sharp fa-solid fa-eye-slash"></i></button> -->
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__name">暱稱</div>
+            <div class="form-row__field">
+                <input type="text" placeholder="以此暱稱為學生上課名稱，30字內" value="Spencer">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__name">性別</div>
+            <div class="form-row__field">
+                <input name="sex" id="sex1" type="radio" value="" checked>
+                <label for="sex1"><span class="icon"><i class="fa-solid fa-check"></i></span>男性</label>
+
+                <input name="sex" id="sex2" type="radio" value="">
+                <label for="sex2"><span class="icon"><i class="fa-solid fa-check"></i></span>女性</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__name">生日</div>
+            <div class="form-row__field">
+                <input type="text" placeholder="年/月/日">
+
+                <!-- icon -->
+                <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-row__field">
+                <input name="openad" id="openad" type="checkbox" value="" checked>
+                <label for="openad"><span class="icon"><i class="fa-solid fa-check"></i></span>開啟公益廣告</label>
+            </div>
+        </div>
+
+        <button class="basic-btn">更新</button>
+    </section>
+</div><!-- END .container.member -->
 
 <footer>
     <div class="social-links">

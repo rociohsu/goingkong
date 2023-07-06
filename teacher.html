@@ -46,17 +46,24 @@
                     </div>
                 </div>
             </div>
-            <div><a href="search.html">搜尋講師</a></div>
-            <div><a href="teacher-rank.html">講師排行榜</a></div>
+
+            <div class="nav-second-open">講師列表 <i class="fa-solid fa-angle-down"></i>
+
+                <div class="nav-second">
+                    <div><a href="search.html"><i class="fa-solid fa-caret-right"></i> <b>搜尋講師</b></a></div>
+                    <div><a href="teacher-rank.html"><i class="fa-solid fa-caret-right"></i> <b>講師排行榜</b></a></div>
+                    <div><a href="favorite.html"><i class="fa-solid fa-caret-right"></i> <b>已收藏的講師</b></a></div>
+                </div>
+            </div>
             <div><a href="#">教材</a></div>
         </nav>
     </div>
     <div class="menu">
         <!-- 展開前 -->
         <div class="menu-r">
-            <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
             <div class="menu-r-btn"><a href="register.html">註冊</a></div>
             <div class="menu-r-btn"><a href="login.html">登入</a></div>
+            <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
         </div>
 
         <!-- 展開後 -->
@@ -68,10 +75,10 @@
                 歡迎光臨!
             </div>
             <div class="menu-r-second">
-                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>個人資料設定</b></a>
+                <a href="profile.html"><i class="fa-solid fa-caret-right"></i> <b>會員資料設定</b></a>
             </div>
             <div class="menu-r-second">
-                <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程購買</b></a>
+                <a href="plan.html"><i class="fa-solid fa-caret-right"></i> <b>課程購買</b></a>
             </div>
             <div class="menu-r-second">
                 <a href="#"><i class="fa-solid fa-caret-right"></i> <b>購買記錄</b></a>
@@ -83,6 +90,8 @@
                 <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程券記錄</b></a>
             </div>
             <br>
+            <div class="menu-r-btn"><a href="register.html">註冊</a></div>
+            <div class="menu-r-btn"><a href="login.html">登入</a></div>
             <div class="menu-r-mobile menu-r-btn"><a href="#">登出</a></div>
         </div>
 
@@ -120,6 +129,12 @@
                 <div class="videowrap">
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/VvzB4uR3EjE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-nav">
+                        <a class="current">Video 1</a>
+                        <a>Video 2</a>
+                        <a>Video 3</a>
+                        <a>Video 4</a>
                     </div>
                 </div>
 
@@ -271,9 +286,42 @@
             <section class="skill">
                 <h2>技能</h2>
                 <div class="skill-list">
-                    <div>小提琴 Violin</div>
-                    <div>母語講師 Native Speaker</div>
-                    <div>鋼琴 Piano</div>
+                    <div class="type">小提琴 Violin
+                        <span class="state"><i class="fa-solid fa-circle-check"></i> 樂意教學</span>
+                    </div>
+                    <div class="level">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <div class="type">母語講師 Native Speaker
+                        <span class="state"><i class="fa-solid fa-circle-check"></i> 樂意教學</span>
+                    </div>
+                    <div class="level">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <div class="type">鋼琴 Piano
+                        <span class="state"><i class="fa-solid fa-circle-check"></i> 樂意教學</span>
+                    </div>
+                    <div class="level">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
                 </div>
             </section>
 
@@ -295,7 +343,9 @@
                             <div>Communication</div>
                             <time>2010.9 ~ 2014.6</time>
                         </div>
-                        <div class="certified"><span class="state"><i class="fa-solid fa-circle-check"></i><br>已認證</span></div>
+                        <div class="certifing">
+                            <span class="state"><i class="fa-solid fa-circle-exclamation"></i><br>認證中</span>
+                        </div>
                     </div>
 
                     <div class="educational-list">
@@ -304,6 +354,9 @@
                             <div>Master</div>
                             <div>Communication</div>
                             <time>2010.9 ~ 2014.6</time>
+                        </div>
+                        <div class="certified">
+                            <span class="state"><i class="fa-solid fa-circle-check"></i><br>已認證</span>
                         </div>
                     </div>
                 </section>
@@ -328,8 +381,23 @@
                 <section class="license">
                     <h2>證照/執照</h2>
                     <div class="license-list">
-                        <div>日文丙級檢定</div>
-                        <time>2023.1.1</time>
+                        <div class="content">
+                            <div>日文丙級檢定</div>
+                            <time>2023.1.1</time>
+                        </div>
+                        <div class="certifing">
+                            <span class="state"><i class="fa-solid fa-circle-exclamation"></i><br>認證中</span>
+                        </div>
+                    </div>
+
+                    <div class="license-list">
+                        <div class="content">
+                            <div>日文乙級檢定</div>
+                            <time>2023.1.1</time>
+                        </div>
+                        <div class="certified">
+                            <span class="state"><i class="fa-solid fa-circle-check"></i><br>已認證</span>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -409,13 +477,13 @@
                             <td>
                                 <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="活動課程(可預約)"><i class="fa-solid fa-check lesson--event"></i></a>
                             </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><a class="lesson-state-close" title="已被他人預約"><i class="fa-solid fa-xmark"></i></a></td>
+                            <td><a class="lesson-state-close" title="課程已結束"><i class="text">END</i></a></td>
+                            <td><a class="lesson-state-close" title="課程已關閉"><i class="text">CLOSE</i></a></td>
                         </tr>
                         <tr>
                             <th>00:30</th>
-                            <td></td>
+                            <td><a class="lesson-state-close" title="系統維護中"><i class="fa-solid fa-screwdriver-wrench"></i></a></td>
                             <td></td>
                             <td></td>
                             <td></td>

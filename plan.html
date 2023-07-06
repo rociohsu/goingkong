@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -100,138 +100,49 @@
     </div>
 </header>
 
-<div class="container checkout">
-    <div class="checkout-wrap">
-        <h4>購買清單</h4>
-        <div class="lesson-list">
-            <a class="teacher-info" href="teacher.html">
-                <div class="head-pic"><img src="images/headpic.jpg"></div>
-                <div class="teacher-name">BiBi Chang</div>
-            </a>
-            <div class="lession-name">
-                <div>五堂 正式課</div>
-                <time>5堂 25分鐘</time>
-            </div>
-            <div class="price">5x TWD$ 100/堂</div>
-            <div class="subtotal">TWD$ 500</div>
-            <div class="sys-btn"><button class="basic-btn">刪除 <i class="fa-solid fa-circle-minus"></i></button></div>
-        </div>
+<div class="container index">
+    <section class="collection">
+        <h2>課程方案購買</h2>
 
-        <div class="lesson-list">
-            <a class="teacher-info" href="teacher.html">
-                <div class="head-pic"><img src="images/headpic.jpg"></div>
-                <div class="teacher-name">BiBi</div>
-            </a>
-            <div class="lession-name">
-                <div>五堂 正式課</div>
-                <time>5堂 25分鐘</time>
-            </div>
-            <div class="price">5x TWD$ 100/堂</div>
-            <div class="subtotal">TWD$ 500</div>
-            <div class="sys-btn"><button class="basic-btn">刪除 <i class="fa-solid fa-circle-minus"></i></button></div>
-        </div>
-
-        <div class="total">總計 TWD$ <b>1000</b></div>
-
-        <hr>
-
-        <h4>選擇付款方式</h4>
-        <div class="payment-way">
-            <input type="radio" name="payment" id="payment1" checked>
-            <label for="payment1">
-                <i class="fa-solid fa-credit-card"></i> 信用卡付款
-            </label>
-
-            <input type="radio" name="payment" id="payment2">
-            <label for="payment2">
-                <i class="fa-solid fa-cash-register"></i> 超商付款
-            </label>
-
-            <input type="radio" name="payment" id="payment3">
-            <label for="payment3">
-                <i class="fa-solid fa-money-bill-wave"></i> ATM付款
-            </label>
-        </div>
-
-        <div class="creditcard-field">
-            <div>
-                <div class="option__name">信用卡卡號：</div>
-                <div class="option__content creditcard-num">
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)"> - 
-                    <input type="number" placeholder="0000" oninput="if(value.length>4)value=value.slice(0,4)">
+        <div class="clt-list">
+            <div class="column hvr-glow">
+                <div class="banner"><img src="images/standard.jpg"></div>
+                <div class="top-bar">
+                    <h3>單堂僅62.9元，效期長達90天</h3>
+                    <h2>標準方案 30堂</h2>
+                </div>
+                <div class="bottom-bar">
+                    <div class="price">TWD$ 1888</div>
+                    <a class="btn">點我查看 <i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
 
-            <div>
-                <div class="option__name">僅接受：</div>
-                <div class="option__content creditcard-type">
-                    <!-- 如果偵測到是什麼信用卡，class加上current -->
-                    <img class="current" src="images/visa.png">
-                    <img src="images/mastercard.png">
-                    <img src="images/jcb.png">
+            <div class="column hvr-glow">
+                <div class="banner"><img src="images/free.jpg"></div>
+                <div class="top-bar">
+                    <h3>最受歡迎的，效期長達2年</h3>
+                    <h2>自由方案</h2>
+                </div>
+                <div class="bottom-bar">
+                    <div class="price">講師自由定價</div>
+                    <a class="btn" href="favorite.html">最愛講師頁面挑選 <i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
 
-            <div>
-                <div class="option__name">有效日期(月/年)：</div>
-                <div class="option__content">
-                    <input type="number" placeholder="mm" oninput="if(value.length>2)value=value.slice(0,2)"> / 
-                    <input type="number" placeholder="yy" oninput="if(value.length>2)value=value.slice(0,2)">
+            <div class="column hvr-glow">
+                <div class="banner"><img src="images/premium.jpg"></div>
+                <div class="top-bar">
+                    <h3>即將推出</h3>
+                    <h2>Premium方案 10堂</h2>
                 </div>
-            </div>
-
-            <div>
-                <div class="option__name">背面安全碼(3碼)：</div>
-                <div class="option__content">
-                    <input type="number" placeholder="000" oninput="if(value.length>3)value=value.slice(0,3)">
+                <div class="bottom-bar">
+                    <div class="price">TWD$ 1???</div>
+                    <a class="btn">點我查看 <i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
-
-        <hr>
-
-        <h4>電子發票存入方式</h4>
-        <div class="invoice-type">
-            <input type="radio" name="invoice" id="invoice1" checked>
-            <label for="invoice1">
-                <i class="fa-solid fa-circle-user"></i> 會員載具
-            </label>
-
-            <input type="radio" name="invoice" id="invoice2">
-            <label for="invoice2">
-                <i class="fa-solid fa-barcode"></i> 手機載具
-            </label>
-        </div>
-
-        <div class="creditcard-field">
-            <!-- 如果有選手機載具才會出現輸入框供填寫 -->
-            <div class="mobile-carrier">
-                <div class="option__name">輸入手機載具：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text" placeholder="/0000000" oninput="if(value.length>8)value=value.slice(0,8)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">統一編號(選填)：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text" oninput="if(value.length>8)value=value.slice(0,8)">
-                </div>
-            </div>
-
-            <div>
-                <div class="option__name">統一編號抬頭(選填)：</div>
-                <div class="option__content">
-                    <input class="field-lg" type="text">
-                </div>
-            </div>
-        </div>
-
-        <div align="center"><a class="basic-btn lg hvr-grow" href="checkout-finish.html">確認並同意支付 <i class="fa-solid fa-angle-right"></i></a></div>
-    </div><!-- END .checkout-wrap -->
-</div><!-- END .container.checkout -->
+    </section>
+</div><!-- END .container.index -->
 
 <footer>
     <div class="social-links">
@@ -246,6 +157,7 @@
     </div>
     <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
 </footer>
+
 </body>
 
 </html>

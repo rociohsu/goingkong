@@ -118,7 +118,7 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
         }
 
         .menu-r-mobile { display: none; }
-        .menu-r { display: flex; flex-flow: row-reverse; justify-content: flex-end; align-items: center;
+        .menu-r { display: flex; flex-flow: row; justify-content: flex-end; align-items: center;
 
             > .menu-r-btn > a { display: inline-block; padding: 5px 15px; background: @color-cisbase-light; border-radius: 25px; transition: 0.3s; }
             > .menu-r-btn > a:hover { color: @color-white; background: @color-cisbase; }
@@ -155,8 +155,9 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
         .header-l { flex-flow: wrap;
     
             .logo { width: 130px; margin-right: 0; margin-bottom: 10px; }
-            nav { width: 100%; text-align: center; 
-                .nav-second { text-align: left; }
+            nav { position: relative; width: 100%; text-align: center; 
+                > * { position: static; }
+                .nav-second { left: 0; right: 0; margin: 0 auto; text-align: left; }
             }
         }
         .menu { position: fixed; width: auto; top: 10px; right: 5px;

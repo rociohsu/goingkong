@@ -70,6 +70,11 @@
 .videowrap { width: 100%; margin: 0 auto 20px auto;
     .video { position: relative; width: 100%; height: 0; padding-top: 56.25%; /*16:9*/ }
     .video iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+    .video-nav { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+        > a { width: 100%; padding: 10px 20px; text-align: center; border: 1px solid @color-cisbase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: 0.3s; }
+        > a:hover { background: @color-cisbase-light; }
+        .current { color: @color-white; background: @color-cisbase; }
+    }
 }
 
 .introduction { line-height: 180%; 
@@ -90,9 +95,13 @@
 .language { display: flex; flex-flow: wrap; justify-content: space-between; 
     .language-list { display: flex; flex-flow: nowrap;
         width: calc(50% - 10px); margin: 10px 20px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
-        h3 { font-weight: normal; }
-        .state { display: inline-block; margin-left: 10px; color: @color-cisbase; }
-        .level { margin-top: 10px; color: @color-yellow; }
+        h3 { font-weight: normal; white-space: nowrap; }
+        > div { width: 100%;
+            .type { display: flex; flex-flow: nowrap; justify-content: space-between;
+                .state { display: inline-block; margin-left: 10px; color: @color-cisbase; white-space: nowrap; }
+            }
+            .level { margin-top: 10px; color: @color-yellow; }
+        }
     }
     .language-list:nth-child(odd) { margin-right: 0; }
 }
@@ -101,20 +110,39 @@
     .educational-list { display: flex; flex-flow: row-reverse; align-items: center;
         width: calc(50% - 10px); margin: 0 10px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
         .content { width: 100%; }
-        .certified { width: auto; margin-right: 20px; padding-right: 20px; color: @color-cisbase; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
+        .certifing { width: auto; margin-right: 20px; padding-right: 20px; color: @color-cisbase; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
+        .certified { width: auto; margin-right: 20px; padding-right: 20px; color: @color-green; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
     }
     .educational-list:nth-child(odd) { margin-right: 0; }
 }
 
-.work-list { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 5px;
-    > time { margin-left: 20px; }
+.work-list { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 5px; font-size: 18px;
+    > div { width: 100%; }
+    > time { width: 100%; margin-left: 20px; }
 }
 
-.license-list { display: flex; flex-flow: nowrap; align-items: center; margin-bottom: 5px;
-    > time { margin-left: 20px; }
+.license { display: flex; flex-flow: wrap; justify-content: space-between; 
+    .license-list { display: flex; flex-flow: row-reverse; align-items: center;
+        width: calc(50% - 10px); margin: 0 10px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
+        .content { width: 100%; }
+        .certifing { width: auto; margin-right: 20px; padding-right: 20px; color: @color-cisbase; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
+        .certified { width: auto; margin-right: 20px; padding-right: 20px; color: @color-green; text-align: center; white-space: nowrap; border-right: 1px solid @color-lighter; }
+    }
+    .educational-list:nth-child(odd) { margin-right: 0; }
 }
 
-.interest-list > div, .skill-list > div { display: inline-block; margin: 0 5px 10px 0; padding: 10px 15px; border: 1px solid @color-lighter; border-radius: 25px; }
+.interest-list > div { display: inline-block; margin: 0 5px 10px 0; padding: 10px 15px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px; }
+
+.skill { display: flex; flex-flow: wrap; justify-content: space-between; 
+    .skill-list { 
+        width: calc(50% - 10px); margin: 10px 20px 10px 0; padding: 20px; font-size: 18px; border: 1px solid @color-lighter; border-radius: 25px;
+        .type { display: flex; flex-flow: nowrap; justify-content: space-between;
+            .state { display: inline-block; margin-left: 10px; color: @color-cisbase; white-space: nowrap; }
+        }
+        .level { margin-top: 10px; color: @color-yellow; }
+    }
+    .skill-list:nth-child(odd) { margin-right: 0; }
+}
 
 .textbook-list { display: inline-block; padding: 20px; margin: 0 10px 15px 0; color: @color-cisbase; font-size: 18px; background: @color-lightist; border-radius: 25px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); overflow: hidden; }
 .textbook-list:hover { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
@@ -197,15 +225,19 @@
         }
     }
 }
-.lesson-state {
+.lesson-state, .lesson-state-close {
     > i { display: inline-flex; justify-content: center; align-items: center; 
-        width: 30px; height: 30px; color: @color-white; font-size: 16px; border-radius: 99em; 
+        width: 30px; height: 30px; color: @color-white; font-size: 16px; font-style: normal; border-radius: 99em; 
     }
+    i.text { width: auto; padding: 0 10px; }
     i.lesson--reserved { background: @color-yellow; }
     i.lesson--standard { background: @color-green; }
     i.lesson--free { background: @color-cisbase; }
     i.lesson--discount { background: @color-red; }
     i.lesson--event { background: @color-blue; }
+}
+.lesson-state-close { cursor: text;
+    > i {  background: @color-lighter; }
 }
 
 /* 取消預約popup */
@@ -221,7 +253,7 @@
                 .country-flag { width: 24px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; }
                 .country-name { width: calc(100% - 30px); font-size: 14px; }
             }
-            time { display: block; margin-top: 10px; 
+            time { display: block; margin-top: 10px; text-align: left;
                 > div { color: @color-cisbase; font-size: 20px; white-space:pre-wrap; }
             }
         }
@@ -264,7 +296,10 @@
 
     .videowrap { margin: 0 auto 15px auto; }
 
-    .profile { flex-flow: wrap; margin-bottom: 10px; 
+    .profile { flex-flow: wrap; margin-bottom: 10px;
+        .profile-info { width: 100%; 
+            .profile-info-basic { width: calc(100% - 115px); }
+        } 
         .profile-info.more { margin-top: 10px; 
             .evaluate > div, .frequency > div { display: inline-flex; margin-right: 10px; }
         }
@@ -276,7 +311,7 @@
         }
     }
 
-    .educational-list, .language-list { width: 100% !important; margin-right: 0 !important; }
+    .educational-list, .language-list, .skill-list, .license-list { width: 100% !important; margin-right: 0 !important; }
 
     .tabs > a { padding: 10px 0; font-size: 14px; }
 

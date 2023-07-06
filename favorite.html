@@ -102,87 +102,8 @@
 
 <div class="container search">
     <div class="search-wrap">
-        <div class="search-box">
-        <form action="search.html">
-            <div class="search-box__title">搜尋講師：
-                <input type="text" placeholder="請輸入講師名，可輸入關鍵字">
-            </div>
-            <div class="search-box__option">
-                <div class="search-box__title">進階選項</div>
-                <div>
-                    <div class="option__name">國家：</div>
-                    <div class="option__content">
-                        <a class="basic-btn popup" rel="choose-country">選擇國家</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="option__name">性別：</div>
-                    <div class="option__content">
-                        <input name="sex" id="sex0" type="radio" value="" checked>
-                        <label for="sex0"><span class="icon"><i class="fa-solid fa-check"></i></span>不指定</label>
-
-                        <input name="sex" id="sex1" type="radio" value="">
-                        <label for="sex1"><span class="icon"><i class="fa-solid fa-check"></i></span>男性</label>
-
-                        <input name="sex" id="sex2" type="radio" value="">
-                        <label for="sex2"><span class="icon"><i class="fa-solid fa-check"></i></span>女性</label>
-                    </div>
-                </div>
-                <div>
-                    <div class="option__name">年齡：</div>
-                    <div class="option__content">
-                        <input name="year" id="year0" type="checkbox" value="">
-                        <label for="year0"><span class="icon"><i class="fa-solid fa-check"></i></span>所有年齡層</label>
-
-                        <input name="year" id="year1" type="checkbox" value="">
-                        <label for="year1"><span class="icon"><i class="fa-solid fa-check"></i></span>~19歲</label>
-
-                        <input name="year" id="year2" type="checkbox" value="">
-                        <label for="year2"><span class="icon"><i class="fa-solid fa-check"></i></span>20多歲</label>
-
-                        <input name="year" id="year3" type="checkbox" value="">
-                        <label for="year3"><span class="icon"><i class="fa-solid fa-check"></i></span>30多歲</label>
-
-                        <input name="year" id="year4" type="checkbox" value="">
-                        <label for="year4"><span class="icon"><i class="fa-solid fa-check"></i></span>40多歲</label>
-
-                        <input name="year" id="year5" type="checkbox" value="">
-                        <label for="year5"><span class="icon"><i class="fa-solid fa-check"></i></span>50歲~</label>
-                    </div>
-                </div>
-                <div>
-                    <div class="option__name">特色：</div>
-                    <div class="option__content">
-                        <input name="spec" id="spec0" type="checkbox" value="">
-                        <label for="spec0"><span class="icon"><i class="fa-solid fa-check"></i></span>母語講師</label>
-
-                        <input name="spec" id="spec1" type="checkbox" value="">
-                        <label for="spec1"><span class="icon"><i class="fa-solid fa-check"></i></span>非母語講師</label>
-
-                        <input name="spec" id="spec2" type="checkbox" value="">
-                        <label for="spec2"><span class="icon"><i class="fa-solid fa-check"></i></span>擅長自由會話</label>
-
-                        <input name="spec" id="spec3" type="checkbox" value="">
-                        <label for="spec3"><span class="icon"><i class="fa-solid fa-check"></i></span>適合兒童</label>
-                    </div>
-                </div>
-                <div>
-                    <div class="option__name">我的最愛：</div>
-                    <div class="option__content">
-                        <input name="favorite" id="favorite" type="checkbox" value="">
-                        <label for="favorite"><span class="icon"><i class="fa-solid fa-check"></i></span>只顯示已收藏的講師</label>
-                    </div>
-                </div>
-            </div><!-- END .search-box__option -->
-            <div class="search-box__btn">
-                <button class="basic-btn gray" type="reset">重設</button>
-                <button class="basic-btn" type="submit">搜尋</button>
-            </div>
-        </form>
-        </div><!-- END .search-box -->
-
-        <h2 align="center">講師列表</h2>
-        <h4 align="center">找到 10 位講師</h4>
+        <h2 align="center">已收藏的講師</h2>
+        <h4 align="center">已收藏 10 位講師</h4>
 
         <div class="teacher-list">
             <div class="teacher-list__intro">
@@ -346,11 +267,6 @@
                 <!-- <a class="add-favorite current hvr-grow"><i class="fa-solid fa-heart"></i></a> -->
             </div>
         </div><!-- END .teacher-list -->
-
-        <div class="loading">
-            <span class="loader"></span>
-            <span>Loading</span>
-        </div>
 
         <div class="pager">
             <a href="#"><i class="fa-solid fa-angle-left"></i></a>

@@ -20,6 +20,7 @@ $(function() {
 
     /* open nav-second */
     $('.nav-second-open').click(function(){
+        $('.nav-second-open').not(this).find('.nav-second').slideUp(300);
         $(this).find('.nav-second').slideToggle(300);
     });
 
