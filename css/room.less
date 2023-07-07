@@ -43,6 +43,14 @@
         .msg-content { max-width: calc(100% - 50px); margin-left: 10px; padding: 10px 15px; background: @color-cisbase-light; border-radius: 20px; }
         time { width: 100%; padding: 5px 0 0 65px; font-size: 12px; color: @color-light; } 
     }
+
+    .lesson-id { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+        width: 100%; margin: 30px 0 20px 0;
+        font-size: 14px; color: @color-light; text-align: center; word-break: break-all; white-space: nowrap; }
+    .lesson-id::before, .lesson-id::after { content: ''; display: block; width: 100%; height: 2px; margin-right: 10px; border-bottom: 1px solid @color-lighter; }
+    .lesson-id::after { margin-right: 0; margin-left: 10px; }
+    .lesson-id:first-child { margin-top: 0; }
+
     .sys-msg { 
         .sys-msg-tag { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center;
             width: 40px; height: 40px; color: @color-light; font-size: 14px; background: @color-lightist; border-radius: 99em; }
@@ -87,8 +95,15 @@
 
 /* 聊天室頁面 */
 .container.chat { padding: 20px; background: @color-white;
+    h2 { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; white-space: nowrap; }
+    .form-row__field { position: relative; display: inline-block; width: 100%; max-width: 200px; margin-left: 20px; 
+        select { width: 100%; height: 40px; padding: 5px 15px; border: 1px solid @color-light; background: none; border-radius: 5px; }
+        .icon-btn { display: block; position: absolute; right: 0; top: 5px; bottom: 0; margin: auto 0; padding: 5px 10px; color: @color-normal; background: none; }
+        .icon-btn.select { pointer-events: none; }
+    }
     .chat-wrap { width: 100%; margin: 0 auto; 
-        display: flex; flex-flow: nowrap; justify-content: space-between; background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 20px; overflow: hidden; }
+        display: flex; flex-flow: nowrap; justify-content: space-between; background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 20px; overflow: hidden; 
+    }
     .chat-left { width: 30%; height: 75dvh;
         border-right: 1px solid @color-lighter; background: @color-cisbase-light; overflow: auto; 
 

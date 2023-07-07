@@ -146,13 +146,12 @@
             a.current { color: @color-white; background: @color-cisbase; }
         }
 
-        .teacher-list { counter-reset: num;
+        .teacher-list {
             .teacher-list__intro { width: calc(50% - 20px); 
                 > a:not(.add-favorite) { position: relative; padding: 40px 20px 40px 190px; 
                     .head-pic { position: absolute; width: 160px; height: 160px; left: 20px; top: 20px; bottom: 0; margin: auto 0; padding-bottom: 0; border-radius: 99em; overflow: hidden; z-index: 0; }
-                    .rank-title { position: absolute; left: 20px; top: 10px; font-size: 18px; font-weight: bold; z-index: 1;
-                        > i { position: relative; font-size: 42px; color: @color-normal; }
-                        > i::after { display: block; counter-increment: num; content: counter(num); position: absolute; width: 100%; top: 5px; left: 0; font-size: 16px; color: @color-white; text-align: center; }
+                    .rank-title { position: absolute; left: 60px; top: 12px; font-size: 18px; font-weight: bold; z-index: 1;
+                        > i { margin-right: 3px; font-size: 24px; color: @color-normal; }
                     }
                     .teacher-name { margin-top: -5px; }
                 }
@@ -176,6 +175,7 @@
                 .teacher-list__intro { width: 100%; margin: 20px auto 0 auto;
                     > a:not(.add-favorite) { padding-left: 135px; 
                         .head-pic { width: 100px; height: 100px; } 
+                        .rank-title { left: 30px; top: 40px; }
                     }
                 }
             }
