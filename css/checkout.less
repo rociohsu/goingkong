@@ -3,6 +3,7 @@
 /* 購物車付款頁面 */
 .container.checkout { padding-top: 40px; min-height: 70dvh;
     .checkout-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 15px; }
+    h2 { margin: 0 auto 20px auto; padding: 0; }
     h2.success, h2.error {
         > i { display: block; margin: 0 auto; font-size: 48px; }
     }
@@ -82,14 +83,18 @@
 }
 
 @media (max-width: 820px) {
-    .ticket-list { flex-flow: wrap;
+    .ticket-list { flex-flow: wrap; align-items: flex-start;
         .teacher-info { width: 100%; margin-bottom: 10px; align-items: center;
             .head-pic { width: 60px; height: 60px; margin-right: 15px; }
         }
         .lession-name { width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; }
+        .number { width: 30%; margin-top: 10px; padding-top: 10px; border-top: 1px solid @color-cisbase-light; font-size: 16px; 
+            > b { font-size: 20px; }
+        }
+        .dateline { width: 70%; margin-top: 10px; padding-top: 10px; border-top: 1px solid @color-cisbase-light; font-size: 12px; }
         .price { width: 100%; margin-top: 10px; padding-top: 10px; border-top: 1px solid @color-cisbase-light; }
         .subtotal { width: 50%; text-align: left; }
-        .sys-btn { width: 50%; text-align: right; }
+        .sys-btn { width: 50%; margin-top: -20px; text-align: right; }
     }
 
     .checkout-wrap .total { padding: 0; font-size: 18px; text-align: center; 
