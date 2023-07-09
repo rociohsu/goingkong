@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/member.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -100,33 +100,43 @@
     </div>
 </header>
 
-<div class="container checkout">
-    <div class="checkout-wrap">
-        <!-- 購買成功顯示 -->
-        <h2 class="success"><i class="fa-solid fa-circle-check"></i> 已完成購買</h2>
-        <h4>訂單編號：12345678</h4>
-        <hr>
-        <h4>可查詢訂單</h4>
-        <div class="recommend-link">
-            <a href="#"><i class="fa-solid fa-caret-right"></i> <b>購買記錄</b></a>
+<div class="container member">
+    <section class="login">
+        <h2>上課需求</h2>
+        <h4>您的上課需求會在 <b>預約課程</b> 及 <b>每次上課時</b><br>
+            傳送給講師</h4>
+        <div class="form-row">
+            <div class="form-row__name">自我介紹</div>
+            <div class="form-row__field">
+                <input name="option1" id="option1-1" type="radio" value="">
+                <label for="option1-1"><span class="icon"><i class="fa-solid fa-check"></i></span>需要自我介紹</label>
 
-            <a href="#"><i class="fa-solid fa-caret-right"></i> <b>可用課程券</b></a>
-
-            <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程券記錄</b></a>
+                <input name="option1" id="option1-2" type="radio" value="" checked>
+                <label for="option1-2"><span class="icon"><i class="fa-solid fa-check"></i></span>不需自我介紹</label>
+            </div>
         </div>
 
-        <!-- 購買失敗顯示 -->
-        <h2 class="error"><i class="fa-solid fa-circle-exclamation"></i> 付款失敗</h2>
-        <h4>訂單不成立</h4>
-        <hr>
-        <h4>請再試一次</h4>
-        <div class="recommend-link">
-            <a href="checkout.html"><i class="fa-solid fa-caret-right"></i> <b>返回購物車</b></a>
+        <div class="form-row">
+            <div class="form-row__name">糾正錯誤</div>
+            <div class="form-row__field">
+                <input name="option2" id="option2-1" type="radio" value="">
+                <label for="option2-1"><span class="icon"><i class="fa-solid fa-check"></i></span>需要糾正錯誤</label>
 
-            <a href="#"><i class="fa-solid fa-caret-right"></i> <b>課程購買</b></a>
+                <input name="option2" id="option2-2" type="radio" value="" checked>
+                <label for="option2-2"><span class="icon"><i class="fa-solid fa-check"></i></span>不需糾正錯誤</label>
+            </div>
         </div>
-    </div><!-- END .checkout-wrap -->
-</div><!-- END .container.checkout -->
+
+        <div class="form-row">
+            <div class="form-row__name">上課需求</div>
+            <div class="form-row__field">
+                <textarea placeholder="請填寫通用性需求，各別需求請在預約時填寫課程需求，講師會盡量滿足您的上課需求，請勿填寫標點符號以外的特殊符號"></textarea>
+            </div>
+        </div>
+
+        <button class="basic-btn">儲存</button>
+    </section>
+</div><!-- END .container.chat -->
 
 <footer>
     <div class="social-links">
