@@ -164,7 +164,10 @@
         }
         .chat-right { width: 100%; 
             .chat-window {
-                .chat-window-msg { height: calc(65dvh - 50px); }
+                .chat-window-msg { height: calc(65dvh - 50px);
+                    .lesson-id { font-size: 12px; white-space: normal; }
+                    .lesson-id::before, .lesson-id::after { width: 15%; }
+                }
             }
         }
     }

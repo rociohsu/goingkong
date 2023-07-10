@@ -221,14 +221,14 @@
         border-left: 1px solid @color-lighter; border-top: 1px solid @color-lighter;
     
         thead tr td { position: sticky; top: 80px; padding: 10px;
-            color: @color-white; text-align: center; background: @color-cisbase;
+            color: @color-white; text-align: center; white-space: nowrap; background: @color-cisbase;
             border-right: 1px solid @color-lighter; border-bottom: 1px solid @color-lighter; 
             z-index: 1;
         }
         tbody tr {
             th { padding: 10px; text-align: center; background: @color-cisbase-light; 
                 border-right: 1px solid @color-lighter; border-bottom: 1px solid @color-lighter; }
-            td { padding: 10px; text-align: center; background: @color-lightist; 
+            td { padding: 10px; text-align: center; vertical-align: middle; background: @color-lightist; 
                 border-right: 1px solid @color-lighter; border-bottom: 1px solid @color-lighter;
 
                 .lesson-state { border-radius: 99em; }
