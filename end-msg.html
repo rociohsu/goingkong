@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/room.css">
+    <link rel="stylesheet" href="css/history.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -37,7 +37,6 @@
                 <div class="nav-second">
                     <div><a href="reservation.html"><i class="fa-solid fa-caret-right"></i> <b>預約列表</b></a></div>
                     <div><a href="lesson-history.html"><i class="fa-solid fa-caret-right"></i> <b>上課記錄</b></a></div>
-                    <div><a href="end-msg.html"><i class="fa-solid fa-caret-right"></i> <b>課後訊息</b></a></div>
                     <div>
                         <a href="requirement.html"><i class="fa-solid fa-caret-right"></i> <b>上課需求</b>
                             <p>上課需求，會在上課時顯示讓講師了解</p>
@@ -100,8 +99,58 @@
     </div>
 </header>
 
-<div class="container">
-    <h2>課後訊息</h2>
+<div class="container lession-history">
+    <div class="lession-history-wrap">
+        <h2><a class="back" href="lesson-history.html">返回上課紀錄</a> <i class="fa-solid fa-angle-right"></i> 課後訊息</h2>
+
+        <div class="lesson-list">
+            <div class="state-bar">
+                <div class="lesson-id">課程編號：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">標準方案</div>
+                <time>預約時間：2023/07/02(日) 08:00~08:25</time>
+                <div class="textbook">教材：兒童1</div>
+            </div>
+            <div class="sys-btn">
+                <a href="chat-history.html">聊天紀錄</a>
+                <a href="review.html">評價</a>
+            </div>
+
+            <div class="message">
+                <div class="form-row">
+                    <div class="form-row__name">單字：</div>
+                    <div class="form-row__content">Cat</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">發音：</div>
+                    <div class="form-row__content">Cat</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">評語：</div>
+                    <div class="form-row__content">
+                        <p>程一駿表示，早期台灣基本上只要有沙灘就可見海龜上岸足跡，但因棲地受到人為破壞，目前大多分布在澎湖望安、屏東小琉球、墾丁，台東蘭嶼等地，主要都在北回歸線以南。</p>
+
+                        <p>程一駿表示，至於北回歸線以北，雖耆老曾提到目睹海龜上岸，但距今已數十年沒有目擊記錄，他從1992年研究海龜至今，也未曾見過海龜在北回歸線以北上岸，神祕沙灘應是第一筆資料，協會將相關資料傳給他，確認是綠蠵龜，這也是台灣海洋生態保育的重要發現。</p>
+
+                        <p>程一駿研判，可能受到氣候變遷影響，加上保育觀念提升，海龜北移因而擴大棲地。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- END .lession-history-wrap -->
 </div><!-- END .container.chat -->
 
 <footer>

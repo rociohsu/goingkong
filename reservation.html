@@ -20,7 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
-    <link rel="stylesheet" href="css/room.css">
+    <link rel="stylesheet" href="css/history.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
@@ -37,7 +37,6 @@
                 <div class="nav-second">
                     <div><a href="reservation.html"><i class="fa-solid fa-caret-right"></i> <b>預約列表</b></a></div>
                     <div><a href="lesson-history.html"><i class="fa-solid fa-caret-right"></i> <b>上課記錄</b></a></div>
-                    <div><a href="end-msg.html"><i class="fa-solid fa-caret-right"></i> <b>課後訊息</b></a></div>
                     <div>
                         <a href="requirement.html"><i class="fa-solid fa-caret-right"></i> <b>上課需求</b>
                             <p>上課需求，會在上課時顯示讓講師了解</p>
@@ -100,9 +99,84 @@
     </div>
 </header>
 
-<div class="container">
-    <h2>預約列表</h2>
-</div><!-- END .container.chat -->
+<div class="container reservation">
+    <div class="reservation-wrap">
+        <h2>預約列表
+            <div class="form-row__field">
+                <select>
+                    <option>已預約</option>
+                    <option>已取消</option>
+                    <option>全選</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+        </h2>
+
+        <div class="lesson-list">
+            <div class="state-bar">
+                <div class="lesson-id">課程編號：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+                <div class="lesson-state"><i class="fa-solid fa-user lesson--reserved"></i> 已預約</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">標準方案</div>
+                <time>預約時間：2023/07/02(日) 08:00~08:25</time>
+                <div class="textbook">教材：兒童1</div>
+            </div>
+            <div class="sys-btn">
+                <a href="chat-history.html">聊天紀錄</a>
+            </div>
+        </div>
+
+        <div class="lesson-list lesson--canceled">
+            <div class="state-bar">
+                <div class="lesson-id">課程編號：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+                <div class="lesson-state"><i class="fa-solid fa-xmark lesson--canceled"></i> 已取消</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">標準方案</div>
+                <time>預約時間：2023/07/02(日) 08:00~08:25</time>
+                <time class="cancel">取消時間：2023/07/02(日) 08:00~08:25</time>
+                <div class="textbook">教材：兒童1</div>
+            </div>
+            <div class="sys-btn">
+                <a class="none">聊天紀錄</a>
+            </div>
+        </div>
+    </div><!-- END .reservation-wrap -->
+
+    <div class="pager">
+        <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+        <a class="current" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span>...</span>
+        <a href="#">10</a>
+        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+</div><!-- END .container.reservation -->
 
 <footer>
     <div class="social-links">
