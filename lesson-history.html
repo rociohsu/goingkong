@@ -62,7 +62,7 @@
         <div class="menu-r">
             <div class="menu-r-btn"><a href="register.html">註冊</a></div>
             <div class="menu-r-btn"><a href="login.html">登入</a></div>
-            <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
+            <div class="user-pic new-msg"><a><img src="images/headpic.jpg"></a></div>
         </div>
 
         <!-- 展開後 -->
@@ -86,7 +86,7 @@
                 <a href="ticket-history.html"><i class="fa-solid fa-caret-right"></i> <b>課程券記錄</b></a>
             </div>
             <div class="menu-r-second">
-                <a href="chat-history.html"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a>
+                <a class="new-msg" href="chat-history.html"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a>
             </div>
             <br>
             <div class="menu-r-btn"><a href="register.html">註冊</a></div>
@@ -95,7 +95,7 @@
         </div>
 
         <a class="bar-cart" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i><!-- 購物車 --></a>
-        <div class="bar-mobile"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
+        <div class="bar-mobile new-msg"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
     </div>
 </header>
 
@@ -149,9 +149,9 @@
                 <div class="textbook">教材：兒童1</div>
             </div>
             <div class="sys-btn">
-                <a href="end-msg.html">課後訊息</a>
+                <a class="popup new-msg" rel="message">課後訊息</a>
                 <a href="chat-history.html">聊天紀錄</a>
-                <a href="register.html">評價</a>
+                <a class="new-msg" href="register.html">評價</a>
             </div>
         </div>
     </div><!-- END .lession-history-wrap -->
@@ -182,6 +182,46 @@
     </div>
     <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
 </footer>
+
+<!-- 課後訊息popup -->
+<div class="popup-theme message" id="message">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content message">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">課後訊息</h4>
+
+            <div class="form-row">
+                <div class="form-row__name">收信時間：</div>
+                <div class="form-row__content">2023/07/02(日) 09:44</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__name">單字：</div>
+                <div class="form-row__content">Cat</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__name">發音：</div>
+                <div class="form-row__content">Cat</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__name">評語：</div>
+                <div class="form-row__content">
+                    <p>程一駿表示，早期台灣基本上只要有沙灘就可見海龜上岸足跡，但因棲地受到人為破壞，目前大多分布在澎湖望安、屏東小琉球、墾丁，台東蘭嶼等地，主要都在北回歸線以南。</p>
+
+                    <p>程一駿表示，至於北回歸線以北，雖耆老曾提到目睹海龜上岸，但距今已數十年沒有目擊記錄，他從1992年研究海龜至今，也未曾見過海龜在北回歸線以北上岸，神祕沙灘應是第一筆資料，協會將相關資料傳給他，確認是綠蠵龜，這也是台灣海洋生態保育的重要發現。</p>
+
+                    <p>程一駿研判，可能受到氣候變遷影響，加上保育觀念提升，海龜北移因而擴大棲地。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

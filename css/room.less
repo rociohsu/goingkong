@@ -107,7 +107,7 @@
     .chat-left { width: 30%; height: 75dvh;
         border-right: 1px solid @color-lighter; background: @color-cisbase-light; overflow: auto; 
 
-        .chat-list { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+        .chat-list { position: relative; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
             width: 100%; padding: 20px; 
             border-bottom: 1px solid @color-lighter; cursor: pointer;
             
@@ -138,6 +138,11 @@
         }
         .chat-list:last-child { border-bottom: 0; }
         .chat-list.current { background: @color-white; }
+        .new-msg::after { display: block; content: ''; position: absolute; width: 15px; height: 15px; right: 10px; top: 10px; 
+            background: @color-green; border-radius: 99em; 
+            -webkit-animation: color-shiny 1.5s infinite; 
+            animation: color-shiny 1.5s infinite;
+        }
     }
     .chat-right { width: 70%; 
         .chat-window { position: relative;
