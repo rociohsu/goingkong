@@ -20,6 +20,8 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/teacher.css">
+    <link rel="stylesheet" href="css/room.css">
     <link rel="stylesheet" href="css/history.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
@@ -101,12 +103,21 @@
 
 <div class="container reservation">
     <div class="reservation-wrap">
-        <h2>預約列表
+        <h2><div>預約列表</div>
             <div class="form-row__field">
                 <select>
                     <option>已預約</option>
                     <option>已取消</option>
                     <option>全選</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+            <div class="form-row__field">
+                <select>
+                    <option>2023/07</option>
+                    <option>2023/06</option>
+                    <option>2023/05</option>
                 </select>
                 <!-- icon -->
                 <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
@@ -134,7 +145,9 @@
                 <div class="textbook">教材：兒童1</div>
             </div>
             <div class="sys-btn">
-                <a class="new-msg" href="chat-history.html">聊天紀錄</a>
+                <a class="popup hvr-glow" rel="lesson-change">變更教材</a>
+                <a class="red-btn popup hvr-glow" rel="lesson-cancel">取消課程</a>
+                <a class="new-msg hvr-glow" href="chat-history.html">聊天紀錄</a>
             </div>
         </div>
 
@@ -191,6 +204,110 @@
     </div>
     <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
 </footer>
+
+<!-- 變更教材popup -->
+<div class="popup-theme lesson-change" id="lesson-change">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">變更教材</h4>
+
+            <div class="lesson-content">
+                <div class="lesson-detail">
+                    <div class="teacher-list">
+                        <div class="head-pic">
+                            <div><img src="images/headpic.jpg"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <div class="teacher-name">BiBi</div>
+                            <div class="country">
+                                <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                                <div class="country-name">馬來西亞  Malaysia</div>
+                            </div>
+                            <time>上課時間
+                                <div>2023年6月14日 星期三 12:00</div>
+                            </time>
+                        </div>
+                    </div>
+                    
+                    <h3>教材選擇</h3>
+
+                    <div class="lesson-textbook">
+                        <div class="select">
+                            <select>
+                                <option>自由對話</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+                        <div class="select">
+                            <select>
+                                <option>自由對談</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+
+                    <h3>課程需求</h3>
+                    <textarea placeholder="(選填)填寫本堂課程需求"></textarea>
+
+                    <h2 align="center">確認是否變更教材?</h2>
+                    <h3 align="center"><!-- 注意事項 --></h3>
+
+                    <div class="buttons">
+                        <button class="basic-btn gray popup-close">關閉</button>
+                        <button class="basic-btn popup-close">確定變更</button>
+                    </div>
+                </div>
+
+                <div class="lesson-textbook__preview">
+                    <img src="images/textbook.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 取消預約popup -->
+<div class="popup-theme lesson-cancel" id="lesson-cancel">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">取消預約</h4>
+
+            <div class="teacher-list">
+                <div class="head-pic">
+                    <div><img src="images/headpic.jpg"></div>
+                </div>
+                <div class="teacher-info">
+                    <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
+                    <time>預約時間
+                        <div>2023年6月14日 星期三 12:00</div>
+                    </time>
+                </div>
+            </div>
+
+            <h2 align="center">確認是否取消？</h2>
+            <h3 align="center">課程前24小時以上取消,將退還課程券</h3>
+
+            <div class="buttons">
+                <button class="basic-btn gray popup-close">關閉</button>
+                <button class="basic-btn popup-close">確定取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

@@ -20,6 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="css/history.css">
 
     <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
@@ -101,7 +102,17 @@
 
 <div class="container lession-history">
     <div class="lession-history-wrap">
-        <h2>上課紀錄</h2>
+        <h2><div>上課紀錄</div>
+            <div class="form-row__field">
+                <select>
+                    <option>2023/07</option>
+                    <option>2023/06</option>
+                    <option>2023/05</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+        </h2>
 
         <div class="lesson-list">
             <div class="state-bar">
@@ -124,7 +135,7 @@
             </div>
             <div class="sys-btn">
                 <a class="none">課後訊息</a>
-                <a href="chat-history.html">聊天紀錄</a>
+                <a class="hvr-glow" href="chat-history.html">聊天紀錄</a>
                 <a class="none">評價</a>
             </div>
         </div>
@@ -149,9 +160,9 @@
                 <div class="textbook">教材：兒童1</div>
             </div>
             <div class="sys-btn">
-                <a class="popup new-msg" rel="message">課後訊息</a>
-                <a href="chat-history.html">聊天紀錄</a>
-                <a class="new-msg" href="register.html">評價</a>
+                <a class="hvr-glow popup new-msg" rel="message">課後訊息</a>
+                <a class="hvr-glow" href="chat-history.html">聊天紀錄</a>
+                <a class="popup hvr-glow" rel="review">評價</a>
             </div>
         </div>
     </div><!-- END .lession-history-wrap -->
@@ -217,6 +228,125 @@
 
                     <p>程一駿研判，可能受到氣候變遷影響，加上保育觀念提升，海龜北移因而擴大棲地。</p>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 評價popup -->
+<div class="popup-theme review-pop" id="review">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content review-pop">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">請給講師/教材評分</h4>
+
+            <section class="review-popwrap">
+                <div class="review-popleft">
+                    <div class="form-row">
+                        <div class="form-row__name">連線評分</div>
+                        <div class="form-row__field">
+                            <input name="option1" id="option1-1" type="radio" value="">
+                            <label for="option1-1"><span class="icon"><i class="fa-solid fa-check"></i></span>品質不佳</label>
+            
+                            <input name="option1" id="option1-2" type="radio" value="" checked>
+                            <label for="option1-2"><span class="icon"><i class="fa-solid fa-check"></i></span>不錯</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-row__name">請針對連線評價</div>
+                        <div class="form-row__field">
+                            <textarea placeholder="連線相關系統問題,請留言協助我們改"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-popright">
+                    <div class="form-row">
+                        <div class="form-row__name">教師評分</div>
+                        <div class="form-row__field">
+                            <input name="option2" id="option2-1" type="checkbox" value="1">
+                            <label for="option2-1">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option2" id="option2-2" type="checkbox" value="1">
+                            <label for="option2-2">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option2" id="option2-3" type="checkbox" value="1">
+                            <label for="option2-3">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option2" id="option2-4" type="checkbox" value="1">
+                            <label for="option2-4">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option2" id="option2-5" type="checkbox" value="1">
+                            <label for="option2-5">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-row__name">教材評分</div>
+                        <div class="form-row__field">
+                            <input name="option3" id="option3-1" type="checkbox" value="1">
+                            <label for="option3-1">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option3" id="option3-2" type="checkbox" value="1">
+                            <label for="option3-2">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option3" id="option3-3" type="checkbox" value="1">
+                            <label for="option3-3">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option3" id="option3-4" type="checkbox" value="1">
+                            <label for="option3-4">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+
+                            <input name="option3" id="option3-5" type="checkbox" value="1">
+                            <label for="option3-5">
+                                <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                                <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="form-row__name">請針對教材和講師評價</div>
+                        <div class="form-row__field">
+                            <textarea placeholder="此評價將會顯示在講師的個人頁面中,系統和連線問題請填寫至連線評價"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottom-btn">
+                <button class="basic-btn gray popup-close">先不評價</button>
+                <button class="basic-btn">送出評價</button>
             </div>
         </div>
     </div>

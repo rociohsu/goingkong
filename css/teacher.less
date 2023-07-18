@@ -192,9 +192,11 @@
                 h3 { color: @color-cisbase; font-size: 18px; }
             }
         }
-        .total { width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; padding: 20px; 
-            color: @color-cisbase; font-weight: bold; background: @color-cisbase-light; 
-            .btn { padding: 5px 15px; color: @color-white; white-space: nowrap; background: @color-cisbase; border-radius: 30px; transition: 0.3s; }
+        .total { position: relative; width: 100%; padding: 20px 100px 20px 20px; 
+            color: @color-cisbase; font-weight: bold; background: @color-cisbase-light; line-height: 140%; word-break: keep-all;
+            span { white-space: nowrap; }
+            del { display: inline-block; margin-right: 5px; color: @color-light; font-size: 14px; white-space: nowrap; }
+            .btn { position: absolute; right: 10px; top: 0; bottom: 0; margin: auto 0; width: 90px; height: 35px; padding: 5px 10px; color: @color-white; text-align: center; white-space: nowrap; background: @color-cisbase; border-radius: 30px; transition: 0.3s; }
         }
     }
     .free-plan-list:nth-child(odd) { margin-right: 0; }
