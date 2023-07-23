@@ -53,13 +53,13 @@
 .sys-btn-icon { width: 100%; max-width: 1440px; margin: 20px auto; display: flex; flex-flow: nowrap; justify-content: space-around; align-items: center; 
     background: @color-white; border-bottom: 1px solid @color-cisbase-light; z-index: 1;
 
-    > * { padding: 10px 10px 15px 10px; text-align: center; 
+    > * { padding: 5px 10px 10px 10px; margin-bottom: 5px; text-align: center; border-radius: 10px;
         > i { padding: 5px; font-size: 24px; }   
         .fa-heart.gray { color: @color-light; } 
         .sys-btn-second { display: none; }
     }
-    > a:hover { background: @color-cisbase-light; }
-    .enter-now { color: @color-red; }
+    > a:not(.enter-now):hover { background: @color-cisbase-light; }
+    .enter-now { color: @color-white; background: @color-red; border-radius: 10px; }
     .other-btn { position: relative; color: @color-cisbase; cursor: pointer; }
     .other-btn:hover .sys-btn-second { display: block;
         position: absolute; width: 120px; top: 40px; right: 5px; background: @color-white; border: 1px solid @color-lighter; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 1;
@@ -232,15 +232,13 @@
                 border-right: 1px solid @color-lighter; border-bottom: 1px solid @color-lighter; }
             td { padding: 10px; text-align: center; vertical-align: middle; background: @color-lightist; 
                 border-right: 1px solid @color-lighter; border-bottom: 1px solid @color-lighter;
-
-                .lesson-state { border-radius: 99em; }
             }
         }
     }
 }
-.lesson-state, .lesson-state-close {
+.lesson-state, .lesson-state-close { border-radius: 99em; 
     > i { display: inline-flex; justify-content: center; align-items: center; 
-        width: 30px; height: 30px; color: @color-white; font-size: 16px; font-style: normal; border-radius: 99em; 
+        width: 30px; height: 30px; color: @color-white; font-size: 16px; font-style: normal; border-radius: 99em; background: @color-lighter;
     }
     i.text { width: auto; padding: 0 10px; }
     i.lesson--none { background: @color-lighter; }
@@ -249,6 +247,7 @@
     i.lesson--free { background: @color-cisbase; }
     i.lesson--discount { background: @color-red; }
     i.lesson--event { background: @color-blue; }
+    .head-pic { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 99em; overflow: hidden; }
 }
 .lesson-state-close { cursor: text;
     > i {  background: @color-lighter; }
@@ -304,8 +303,8 @@
         .wrap-top { flex-flow: wrap; }
     }
 
-    .sys-btn-icon { width: 100vw; margin: 10px 0 0 -20px; border-radius: 0; border-bottom: 0; font-size: 14px; 
-     > * { padding: 10px 5px 15px 5px; }
+    .sys-btn-icon { width: 100vw; margin: 10px 0 0 -20px; border-bottom: 0; font-size: 14px; 
+        > * { padding: 5px 7px 10px 7px; }
     }
 
     .videowrap { width: 100%; margin: 0 auto 15px auto; }
