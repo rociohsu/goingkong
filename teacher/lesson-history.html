@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>GoingKong出來講</title>
+    <meta name="description" content="GoingKong出來講" />
+    <meta name="keywords" content="GoingKong出來講" />
+
+    <meta property="og:title" content="GoingKong出來講" />
+    <meta property="og:description" content="GoingKong出來講" />
+    <meta property="og:url" content="https://www.goingkong.com/" />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta property="og:type" content="website" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/488bab161f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/layout.js"></script>
+</head>
+
+<body>
+<header class="admin">
+    <div class="header-l">
+        <div class="logo"><a href="index.html"><img src="../images/GoingKong-logo.png"></a></div>
+        <nav>
+            <div class="enter-now"><a href="../room.html"><i class="fa-solid fa-camera"></i> Class Begin</a></div>
+            <div class="nav-second-open">Teaching <i class="fa-solid fa-angle-down"></i>
+                <div class="nav-second">
+                    <div><a href="reservation.html"><i class="fa-solid fa-caret-right"></i> <b>Reservation</b></a></div>
+                    <div><a href="lesson-history.html"><i class="fa-solid fa-caret-right"></i> <b>Lesson History</b></a></div>
+                    <div><a href="teacher-setting.html"><i class="fa-solid fa-caret-right"></i> <b>Teacher Setting</b></a></div>
+                </div>
+            </div>
+            <div><a href="schedule.html">Schedule</a></div>       
+        </nav>
+    </div>
+    <div class="menu">
+        <!-- 展開前 -->
+        <div class="menu-r">
+            <div class="timeshow">
+                <div class="date">2023/07/23</div>
+                <div class="timeshow-flex">
+                    <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                    <time>20:45:16</time>
+                </div>
+            </div>
+            <div class="timeshow">
+                <div class="date">2023/07/23</div>
+                <div class="timeshow-flex">
+                    <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                    <time>20:45:16</time>
+                </div>
+            </div>
+            <div class="menu-r-btn"><a href="register.html">Register</a></div>
+            <div class="menu-r-btn"><a href="login.html">Login</a></div>
+            <div class="user-pic new-msg"><a><img src="../images/headpic.jpg"></a></div>
+        </div>
+
+        <!-- 展開後 -->
+        <div class="menu-r current">
+            <div class="menu-r-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="user-pic"><a><img src="../images/headpic.jpg"></a></div>
+            <div class="user-name">
+                <b>cww20811ss@gmail.com</b><br>
+                Welcome!
+            </div>
+            <div class="menu-r-mobile flex-nowrap">
+                <div class="timeshow">
+                    <div class="date">2023/07/23</div>
+                    <div class="timeshow-flex">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <time>20:45:16</time>
+                    </div>
+                </div>
+                <div class="timeshow">
+                    <div class="date">2023/07/23</div>
+                    <div class="timeshow-flex">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <time>20:45:16</time>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-r-second">
+                <a href="profile.html"><i class="fa-solid fa-caret-right"></i> <b>My Account</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a href="payment.html"><i class="fa-solid fa-caret-right"></i> <b>Payment</b></a>
+            </div>
+            <div class="menu-r-second">
+                <a class="new-msg" href="../chat.html"><i class="fa-solid fa-caret-right"></i> <b>Chat</b></a>
+            </div>
+            <br>
+            <div class="menu-r-btn"><a href="register.html">Register</a></div>
+            <div class="menu-r-btn"><a href="login.html">Login</a></div>
+            <div class="menu-r-btn"><a href="#">Logout</a></div>
+        </div>
+
+        <div class="bar-mobile new-msg"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
+    </div>
+</header>
+
+<div class="container lession-history">
+    <div class="lession-history-wrap">
+        <h2><div>Lesson Record</div>
+            <div class="form-row__field">
+                <select>
+                    <option>2023/07</option>
+                    <option>2023/06</option>
+                    <option>2023/05</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+        </h2>
+
+        <div class="lesson-list">
+            <div class="state-bar">
+                <div class="lesson-id">Lesson ID：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="../images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">Standard Plan</div>
+                <time>Lesson time：2023/07/02(SUN.) 08:00~08:25</time>
+                <div class="textbook">Textbook：children1</div>
+            </div>
+            <div class="sys-btn">
+                <a class="hvr-glow popup" rel="message">After-lesson Msg for Students</a>
+                <a class="hvr-glow" href="../chat-history.html">Chat History</a>
+                <a class="none">View Reviews</a>
+            </div>
+        </div>
+
+        <div class="lesson-list">
+            <div class="state-bar">
+                <div class="lesson-id">Lesson ID：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="../images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">Standard Plan</div>
+                <time>Lesson time：2023/07/02(SUN.) 08:00~08:25</time>
+                <div class="textbook">Textbook：children1</div>
+            </div>
+            <div class="sys-btn">
+                <a class="hvr-glow popup" rel="message">After-lesson Msg for Students</a>
+                <a class="hvr-glow" href="../chat-history.html">Chat History</a>
+                <a class="new-msg popup hvr-glow" rel="review">View Reviews</a>
+            </div>
+        </div>
+    </div><!-- END .lession-history-wrap -->
+
+    <div class="pager">
+        <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+        <a class="current" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span>...</span>
+        <a href="#">10</a>
+        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+</div><!-- END .container.lession-history -->
+
+<footer>
+    <div class="social-links">
+        <a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="web-links">
+        <a href="#">使用條款</a>
+        <a href="#">支援與服務</a>
+        <a href="#">常見問題</a>
+    </div>
+    <div class="copyright">Copyright 2023 GoingKong - All Rights Reserved</div>
+</footer>
+
+<!-- 課後訊息popup -->
+<div class="popup-theme message" id="message">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content message">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">After-lesson Message</h4>
+
+            <div class="form-row">
+                <div class="form-row__name">Word：</div>
+                <div class="form-row__field">
+                    <textarea placeholder=""></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__name">Pronounce：</div>
+                <div class="form-row__field">
+                    <textarea placeholder=""></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-row__name">Comments：</div>
+                <div class="form-row__field">
+                    <textarea placeholder=""></textarea>
+                </div>
+            </div>
+
+            <div class="bottom-btn">
+                <button class="basic-btn gray popup-close">Later</button>
+                <button class="basic-btn">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 評價popup -->
+<div class="popup-theme review-pop" id="review">
+    <div class="popup-container">
+        <div class="overlay-bg"></div>
+
+        <div class="popup-content review-pop wrap">
+            <a class="popup-close-x"><i class="icon-close fa-solid fa-xmark"></i></a>
+
+            <h4 align="center">Review</h4>
+
+            <section class="review-popwrap">
+                <div class="form-row">
+                    <div class="form-row__name">Review Time：</div>
+                    <div class="form-row__content">2023/07/02(SUN.) 09:44</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Teacher Rating：</div>
+                    <div class="form-row__field">
+                        <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                        <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Textbook Rating：</div>
+                    <div class="form-row__field">
+                        <span class="checked--no"><i class="fa-regular fa-star"></i></span>
+                        <span class="checked--yes"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Comments：</div>
+                    <div class="form-row__content">
+                        <p>程一駿表示，早期台灣基本上只要有沙灘就可見海龜上岸足跡，但因棲地受到人為破壞，目前大多分布在澎湖望安、屏東小琉球、墾丁，台東蘭嶼等地，主要都在北回歸線以南。</p>
+    
+                        <p>程一駿表示，至於北回歸線以北，雖耆老曾提到目睹海龜上岸，但距今已數十年沒有目擊記錄，他從1992年研究海龜至今，也未曾見過海龜在北回歸線以北上岸，神祕沙灘應是第一筆資料，協會將相關資料傳給他，確認是綠蠵龜，這也是台灣海洋生態保育的重要發現。</p>
+    
+                        <p>程一駿研判，可能受到氣候變遷影響，加上保育觀念提升，海龜北移因而擴大棲地。</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottom-btn">
+                <button class="basic-btn gray popup-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

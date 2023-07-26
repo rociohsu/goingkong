@@ -21,6 +21,8 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/standard.css">
     <link rel="stylesheet" href="../css/teacher.css">
+    <link rel="stylesheet" href="../css/room.css">
+    <link rel="stylesheet" href="../css/history.css">
     <link rel="stylesheet" href="../css/admin.css">
 
     <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
@@ -109,117 +111,87 @@
     </div>
 </header>
 
-<div class="container admin">
-    <div class="schedule-wrap">
-        <h2>Schedule Your Lessons</h2>
-
-        <h4><i class="fa-solid fa-arrow-down"></i> Select Lesson Type First</h4>
-        <section class="timetable" id="timetable">
-            <div class="options">
-                <a class="lesson--reserved current"><i class="fa-solid fa-user"></i> Reserved Lesson</a>
-                <a class="lesson--standard current"><i class="fa-solid fa-check"></i> Standard Lesson</a>
-                <a class="lesson--free"><i class="fa-solid fa-check"></i> Free Plan Lesson</a>
+<div class="container reservation">
+    <div class="reservation-wrap">
+        <h2><div>Reserved List</div>
+            <div class="form-row__field">
+                <select>
+                    <option>Reserved</option>
+                    <option>Canceled</option>
+                    <option>All</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
             </div>
+            <div class="form-row__field">
+                <select>
+                    <option>2023/07</option>
+                    <option>2023/06</option>
+                    <option>2023/05</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+        </h2>
 
-            <h4><i class="fa-solid fa-arrow-down"></i> Click Time You Can Teach</h4>
-            <div class="timetable-list">
-            <table>
-                <thead>
-                    <tr>
-                        <td>日期<br>時間</td>
-                        <td>06/10<br>(六)</td>
-                        <td>06/11<br>(日)</td>
-                        <td>06/12<br>(一)</td>
-                        <td>06/13<br>(二)</td>
-                        <td>06/14<br>(三)</td>
-                        <td>06/15<br>(四)</td>
-                        <td>06/16<br>(五)</td>
-                        <td>06/17<br>(六)</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>00:00</th>
-                        <td>
-                            <a class="lesson-state popup hvr-glow" rel="lesson-cancel" title="已預約課程"><i class="fa-solid fa-user lesson--reserved"></i></a>
-                        </td>
-                        <td>
-                            <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="標準課程(可預約)"><i class="fa-solid fa-check lesson--standard"></i></a>
-                        </td>
-                        <td>
-                            <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="自由課程(可預約)"><i class="fa-solid fa-check lesson--free"></i></a>
-                        </td>
-                        <td>
-                            <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="優惠課程(可預約)"><i class="fa-solid fa-check lesson--discount"></i></a>
-                        </td>
-                        <td>
-                            <a class="lesson-state popup hvr-glow" rel="lesson-reserve" title="活動課程(可預約)"><i class="fa-solid fa-check lesson--event"></i></a>
-                        </td>
-                        <td><a class="lesson-state-close" title="已被他人預約"><i class="fa-solid fa-xmark"></i></a></td>
-                        <td><a class="lesson-state-close" title="課程已結束"><i class="text">END</i></a></td>
-                        <td><a class="lesson-state-close" title="課程已關閉"><i class="text">CLOSE</i></a></td>
-                    </tr>
-                    <tr>
-                        <th>00:30</th>
-                        <td><a class="lesson-state-close" title="系統維護中"><i class="fa-solid fa-screwdriver-wrench"></i></a></td>
-                        <td><a class="lesson-state hvr-glow" title="未選取"><i class="fa-solid fa-check"></i></td>
-                        <td><a class="lesson-state popup hvr-glow" rel="lesson-cancel" title="已預約課程"><div class="head-pic"><img src="../images/headpic.jpg"></div></a></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>01:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>01:30</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>02:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>02:30</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            </div><!-- END .timetable-list -->
-        </section>
-    </div><!-- END .schedule-wrap -->
-</div><!-- END .container.admin -->
+        <div class="lesson-list">
+            <div class="state-bar">
+                <div class="lesson-id">Lesson ID：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+                <div class="lesson-state"><i class="fa-solid fa-user lesson--reserved"></i> Reserved</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="../images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">Standard Plan</div>
+                <time>Reservation Time：2023/07/02(SUN.) 08:00~08:25</time>
+                <div class="textbook">Textbook：children1</div>
+            </div>
+            <div class="sys-btn">
+                <a class="enter-now hvr-glow" href="room.html"><i class="fa-solid fa-camera"></i> Class Begin</a>
+                <a class="red-btn popup hvr-glow" rel="lesson-cancel">Cancel reservation</a>
+                <a class="new-msg hvr-glow" href="../chat-history.html">Chat History</a>
+            </div>
+        </div>
+
+        <div class="lesson-list lesson--canceled">
+            <div class="state-bar">
+                <div class="lesson-id">Lesson ID：CEDD1E99696D6983DEF697EA9979A23D3A76BC6D</div>
+                <div class="lesson-state"><i class="fa-solid fa-xmark lesson--canceled"></i> Canceled</div>
+            </div>
+            <a class="teacher-info" href="teacher.html">
+                <div class="head-pic"><img src="../images/headpic.jpg"></div>
+                <div class="profile-info-basic">
+                    <div class="teacher-name">BiBi Chang</div>
+                </div>
+            </a>
+            <div class="lession-info">
+                <div class="plan-name">Standard Plan</div>
+                <time>Reservation Time：2023/07/02(SUN.) 08:00~08:25</time>
+                <time class="cancel">Cancellation Time：2023/07/02(SUN.) 08:00~08:25</time>
+                <div class="textbook">Textbook：children1</div>
+            </div>
+            <div class="sys-btn">
+                <a class="none">Chat History</a>
+            </div>
+        </div>
+    </div><!-- END .reservation-wrap -->
+
+    <div class="pager">
+        <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+        <a class="current" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span>...</span>
+        <a href="#">10</a>
+        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+</div><!-- END .container.reservation -->
 
 <footer>
     <div class="social-links">
@@ -247,10 +219,14 @@
 
             <div class="teacher-list">
                 <div class="head-pic">
-                    <div><img src="../images/headpic.jpg"></div>
+                    <div><img src="images/headpic.jpg"></div>
                 </div>
                 <div class="teacher-info">
                     <div class="teacher-name">BiBi</div>
+                    <div class="country">
+                        <div class="country-flag"><img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/my.svg"></div>
+                        <div class="country-name">馬來西亞  Malaysia</div>
+                    </div>
                     <time>預約時間
                         <div>2023年6月14日 星期三 12:00</div>
                     </time>
