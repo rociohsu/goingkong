@@ -17,16 +17,16 @@
     }
 
     .room-right { display: flex; flex-flow: wrap;
-        width: 40%; height: 100dvh; padding: 20px; gap: 20px;
+        width: 40%; height: calc(100dvh - 20px); padding: 20px; gap: 0;
         .videowrap { width: 100%; height: 55%;
             .video { position: relative; width: auto; height: 80%; padding-top: 80%; /*padding-top: 56.25%; 16:9*/ }
             .video iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
         }
 
         .chat-wrap { width: 100%; height: 45%; 
-            .chat-window { position: relative; height: calc(100% - 42px); background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 0 0 20px 20px; 
+            .chat-window { position: relative; display: flex; flex-flow: wrap; height: 100%; background: @color-white; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); border-radius: 0 0 20px 20px; 
                 .chat-window-msg {
-                    width: 100%; height: 30dvh; padding: 20px; 
+                    width: 100%; height: calc(100% - 50px); padding: 20px; 
                     overflow: auto;
                 }
 
@@ -89,7 +89,7 @@
                 .video { width: 100%; height: auto; }
             }
             .chat-wrap { height: auto; padding: 0;
-                .chat-window { height: 250px; }
+                .chat-window { height: 350px; }
             }
         }
     }
