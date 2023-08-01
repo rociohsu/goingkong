@@ -20,6 +20,7 @@
 
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/teacher.css">
     <link rel="stylesheet" href="../css/admin.css">
 
     <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
@@ -111,8 +112,160 @@
 <div class="container admin">
     <h2>Teacher Setting</h2>
         
+    <div class="setting-wrap">
+        <section class="profile-section">
+            <div class="form-row left">
+                <div class="form-row__field">
+                    <input type="file" id="head-pic">
+                    <label class="head-pic-upload" for="head-pic">
+                        <div class="head-pic">
+                            <img src="../images/headpic.jpg">
+                        </div>
+                        <div class="edit"><i class="fa-solid fa-camera"></i></div>
+                    </label>
+                </div>
 
+                <div class="form-row">
+                    <a class="basic-btn" target="_blank" href="../teacher.html">Tutor's Profile Link <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Nick Name</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="This teacher name, within 30 characters." value="Spencer">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Title Yourself</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="" value="小孩專家">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row right">
+                <div class="form-row">
+                    <div class="form-row__name">City</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="" value="Kuala Lumpur, Malaysia">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">Select Time Zone</div>
+                    <div class="form-row__field">
+                        <select>
+                            <option>(GMT-10:00) Hawaii Time</option>
+                        </select>
         
+                        <!-- icon -->
+                        <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__name">E-Mail</div>
+                    <div class="form-row__field">
+                        <input type="email" placeholder="Please enter a valid E-Mail." value="cww20811ss@gmail.com">
+        
+                        <span class="verify"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                </div>
+        
+                <div class="form-row">
+                    <div class="form-row__name">E-Mail</div>
+                    <div class="form-row__field">
+                        <input type="email" placeholder="Please enter a valid E-Mail.">
+        
+                        <span class="no-verify"><i class="fa-solid fa-circle-exclamation"></i> Unverified</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row__field">
+                        <button class="basic-btn">Resend verification letter.</button>
+                        <!-- <button class="basic-btn gray" disabled>Resend in 60 seconds.</button> -->
+                    </div>
+                </div>
+            </div><!-- END .form-row.right -->
+        </section>
+
+        <section class="video-section">
+            <div class="videowrap">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/VvzB4uR3EjE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-url">
+                <div class="form-row">
+                    <div class="form-row__name">Main Video ( Required )</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="https://www.youtube.com/embed/" value="https://www.youtube.com/embed/Z5BMugr0QeI">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-row__name">Addition Video1 ( Optional )</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="https://www.youtube.com/embed/" value="https://www.youtube.com/embed/Z5BMugr0QeI">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-row__name">Addition Video2 ( Optional )</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="https://www.youtube.com/embed/" value="https://www.youtube.com/embed/Z5BMugr0QeI">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-row__name">Addition Video3 ( Optional )</div>
+                    <div class="form-row__field">
+                        <input type="text" placeholder="https://www.youtube.com/embed/" value="https://www.youtube.com/embed/Z5BMugr0QeI">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="form-row">
+            <div class="form-row__name">Self-Introduction</div>
+            <div class="form-row__field">
+                <textarea placeholder="desc6"></textarea>
+            </div>
+        </div>
+
+        <section class="album">
+            <h2>Album</h2>
+
+            <div class="photos">
+                <div>
+                    <img width="160" height="160" src="../images/album1.jpg">
+                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                </div>
+
+                <div>
+                    <img width="160" height="160" src="../images/album1.jpg">
+                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                </div>
+
+                <div>
+                    <img width="160" height="160" src="../images/album1.jpg">
+                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                </div>
+
+                <div>
+                    <img width="160" height="160" src="../images/album1.jpg">
+                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                </div>
+
+                <input type="file" id="photoUpload">
+                <label for="photoUpload">
+                    <div class="no-photo"><i class="fa-solid fa-image"></i></div>
+                    <div class="btn add"><i class="fa-solid fa-square-plus"></i> Upload</div>
+                </label>
+            </div>
+        </section>
+        
+        <div class="updatebar"><button class="basic-btn"><i class="fa-solid fa-floppy-disk"></i> Update</button></div>
+    </div><!-- END .setting-wrap -->    
 </div><!-- END .container.admin -->
 
 <footer>

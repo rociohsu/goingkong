@@ -25,6 +25,10 @@ header.admin {
     }
 }
 
+.container.admin {
+    > h2 { margin-bottom: 0; }
+}
+
 /* Schedule */
 .schedule-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 20px 15px 0 15px; 
     h4 { text-align: center; }
@@ -50,7 +54,7 @@ header.admin {
         > a:hover { color: @color-white; background: @color-blue; }
     }
 
-    .search-bar { position: sticky; top: 90px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; padding: 10px; gap: 10px; background: @color-cisbase-light; border-radius: 5px; 
+    .search-bar { position: sticky; top: 90px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; padding: 10px; gap: 10px; background: @color-cisbase-light; border-radius: 5px; z-index: 1;
         .form-row__field { position: relative; display: inline-flex; align-items: center; width: 100%; max-width: 200px; 
             select { width: 100%; height: 40px; padding: 5px 30px 5px 10px; border: 1px solid @color-light; background: @color-white; border-radius: 5px; }
             .icon-btn { display: block; position: absolute; right: 0; top: 5px; bottom: 0; margin: auto 0; padding: 5px 10px; color: @color-normal; background: none; }
@@ -89,6 +93,121 @@ header.admin {
             .form-row { flex-flow: wrap; 
                 .form-row__name { width: 100%; margin-right: 0; }
                 .form-row__field { width: 100%; }
+            }
+        }
+    }
+}
+
+/* teacher setting */
+.setting-wrap { position: relative; width: 100%; max-width: 1240px; margin: 0 auto; padding: 10px 30px 30px 30px; 
+    background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    .updatebar { position: sticky; width: 100%; bottom: 0; padding: 10px 20px; text-align: center; background: rgba(255, 255, 255, 0.9); 
+        .basic-btn { min-width: 300px; padding: 10px 25px; margin: 0 auto; font-size: 20px; }
+    }
+
+    .form-row { width: 100%; margin: 20px auto; 
+        .form-row__name { display: block; margin-bottom: 5px; font-size: 14px; font-weight: bold; color: @color-cisbase; text-align: left; }
+
+        .form-row__field { position: relative; display: flex; flex-flow: nowrap; align-items: center;
+            a { text-decoration: underline; }
+            span { margin-left: 10px; white-space: nowrap; 
+                > i { display: inline-block; }
+            }
+            .verify i { color: @color-green; }
+            .no-verify i { color: @color-red; }
+            input[type=text], input[type=email], input[type=password], input[type=number], select { width: 100%; height: 40px; padding: 5px 15px; border: 1px solid @color-light; background: none; border-radius: 5px; }
+            input[type=radio], input[type=checkbox], input[type=file] { display: none; }
+            input[type=radio] + label, input[type=checkbox] + label { display: flex; flex-flow: nowrap; align-items: center; margin-right: 20px;
+                .icon { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                    width: 20px; height: 20px; margin-right: 5px; border-radius: 99em; border: 3px solid @color-lighter; 
+                        > i { display: none; font-size: 15px; }
+                }
+            }
+            input[type=checkbox] + label {
+                .icon { border-radius: 5px; }
+            }
+
+            input[type=radio]:checked + label, input[type=checkbox]:checked + label { 
+                .icon { color: @color-white; background: @color-cisbase; border: none;
+                        > i { display: block; }
+                }
+            }
+
+            textarea { display: block; width: 100%; height: 200px; padding: 10px; background: @color-lightist; border-radius: 5px; }
+
+            .icon-btn { display: block; position: absolute; right: 0; top: 0; bottom: 0; margin: auto 0; padding: 5px 10px; color: @color-normal; background: none; }
+            .icon-btn:hover { display: block; }
+            .icon-btn.select { pointer-events: none; }
+            .basic-btn { width: auto; max-width: auto; padding: 10px 25px; margin: 0 auto; font-size: 16px; }
+            .basic-btn.gray { background: @color-lighter; cursor: text; }
+
+            .head-pic-upload { position: relative; width: 100px; margin: 0 auto;
+                .head-pic { position: relative; display: block;  width: 100px; height: 100px; 
+                    border-radius: 99em; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden;
+                    > img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; object-fit: cover; }
+                }
+                .edit { position: absolute; right: 0; bottom: 0; width: 35px; height: 35px; padding: 5px; background: @color-cisbase; border-radius: 99em; 
+                    > i { font-size: 16px; color: @color-white; }
+                }
+            }
+        }
+        .form-row__field.verify {
+            input[type=text], input[type=email], input[type=password], input[type=number] { border-radius: 5px 0 0 5px; }
+            .basic-btn { width: 70%; max-width: 200px; height: 40px; padding: 0; margin: 0; border-radius: 0 5px 5px 0; box-shadow: none; }
+            .basic-btn.disabled { background: @color-lighter; cursor: text; }
+        }
+        .error-msg { margin-top: 5px; color: @color-red; text-align: left; }
+    }
+    .form-row.focus {
+        .form-row__name { color: @color-red; }
+        .form-row__field { 
+            input[type=text], input[type=email], input[type=password], input[type=number] { border: 3px solid @color-red; }
+        }
+    }
+
+    .profile-section { display: flex; flex-flow: nowrap; justify-content: center; align-items: flex-end;
+        margin: 0 auto; font-size: 20px; text-align: center; 
+        .form-row.left { width: calc(100% - 20px); margin-right: 20px;
+            .basic-btn { margin: 10px auto 0 auto; color: @color-blue; font-weight: bold; background: @color-white; border: 2px solid @color-blue; box-shadow: none; }
+        }
+        .form-row.right { width: 100%; }
+    }
+
+    .video-section { display: flex; flex-flow: nowrap; justify-content: space-between;
+        .videowrap { width: calc(100% - 20px); margin-right: 20px; }
+        .video-url { width: 100%; }
+    }
+
+    .album { margin-bottom: 20px;
+        > h2 { display: block; padding: 0; margin-bottom: 5px; font-size: 14px; font-weight: bold; color: @color-cisbase; text-align: left; }
+        .photos { display: flex; flex-flow: wrap; justify-content: stretch; align-items: stretch; gap: 5px; 
+            > * { position: relative; display: block; width: calc(20% - 5px); padding: 0; background: @color-lightist;
+                > img { display: block; width: 100%; height: 160px; object-fit: cover; }
+                .no-photo { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                    width: 100%; height: 160px; color: @color-lighter; font-size: 64px; }
+                .btn { width: 100%; padding: 10px; color: @color-white; text-align: center; }
+                .btn.delete { background: @color-light; }
+                .btn.add { background: @color-blue; }
+            }
+            input[type=file] { display: none; }
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .setting-wrap { padding: 10px 20px 30px 20px;
+        .profile-section { flex-flow: wrap; 
+            .form-row.left { width: 100%; margin-right: 0; }
+            .form-row.right { margin-top: -20px; }
+        }
+
+        .video-section { flex-flow: wrap; 
+            .videowrap { width: 100%; margin-right: 0; }
+        }
+
+        .album .photos { 
+            > * { width: calc(50% - 5px);
+                > img { height: 120px; }
             }
         }
     }

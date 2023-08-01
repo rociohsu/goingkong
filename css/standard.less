@@ -237,8 +237,8 @@ footer { padding: 25px 15px; text-align: center; background: @color-white;
 }
 
 /* 頁碼 */
-.pager { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
-    margin: 30px auto 0 auto;
+.pager { position: relative; display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+    margin: 30px auto 0 auto; z-index: 0;
     > a { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
         width: 36px; height: 36px; padding: 5px; margin: 0 3px; font-size: 18px; background: @color-white; border-radius: 99em; 
     }
