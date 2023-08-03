@@ -238,31 +238,545 @@
             <div class="photos">
                 <div>
                     <img width="160" height="160" src="../images/album1.jpg">
-                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                    <button class="btn delete"><i class="fa-solid fa-xmark"></i> Delete</button>
                 </div>
 
                 <div>
                     <img width="160" height="160" src="../images/album1.jpg">
-                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                    <button class="btn delete"><i class="fa-solid fa-xmark"></i> Delete</button>
                 </div>
 
                 <div>
                     <img width="160" height="160" src="../images/album1.jpg">
-                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                    <button class="btn delete"><i class="fa-solid fa-xmark"></i> Delete</button>
                 </div>
 
                 <div>
                     <img width="160" height="160" src="../images/album1.jpg">
-                    <button class="btn delete"><i class="fa-solid fa-square-minus"></i> Delete</button>
+                    <button class="btn delete"><i class="fa-solid fa-xmark"></i> Delete</button>
                 </div>
 
                 <input type="file" id="photoUpload">
                 <label for="photoUpload">
                     <div class="no-photo"><i class="fa-solid fa-image"></i></div>
-                    <div class="btn add"><i class="fa-solid fa-square-plus"></i> Upload</div>
+                    <div class="btn add"><i class="fa-solid fa-plus"></i> Upload</div>
                 </label>
             </div>
         </section>
+        
+        <div class="form-row">
+            <div class="form-row__name">Would you be willing to teach this type of content?</div>
+            <div class="form-row__field switch-option">
+                <div class="column">Free Talk Label：
+                    <div class="setting__switch">
+                        <input type="checkbox" name="freetalk"  id="freetalk" checked>
+                        <label for="freetalk">
+                            <span class="switch__inner"></span>
+                            <span class="switch__switch"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="column">Kids Label：
+                    <div class="setting__switch">
+                        <input type="checkbox" name="kids"  id="kids">
+                        <label for="kids">
+                            <span class="switch__inner"></span>
+                            <span class="switch__switch"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="column">Chat Label：
+                    <div class="setting__switch">
+                        <input type="checkbox" name="chat"  id="chat">
+                        <label for="chat">
+                            <span class="switch__inner"></span>
+                            <span class="switch__switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div><!-- END .form-row__field -->
+        </div><!-- END .form-row -->
+
+        <!-- 語言 -->
+        <div class="form-row">
+            <div class="form-row__name">
+                Languages
+                <p><i class="fa-solid fa-circle-exclamation"></i> please list all even your language proficiency is not perfect but students may interesting discussing or talking with you as a topic.</p>
+            </div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <select>
+                        <option>Language Name</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Level 4 (Business)</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>No</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>Teach</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <select>
+                        <option>Language Name</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Level 4 (Business)</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>No</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>Teach</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div><!-- END .form-row__field -->
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Language</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 技能 -->
+        <div class="form-row">
+            <div class="form-row__name">Skills</div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="Skill Name" value="Dancing">
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Level 5</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Outdoor</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Competitive</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>Teach</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="Skill Name">
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Level 5</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Outdoor</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Competitive</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <select>
+                        <option>Teach</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div><!-- END .form-row__field -->
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Skill</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 學歷 -->
+        <div class="form-row">
+            <div class="form-row__name">Education</div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="School Name" value="Malaysia University">
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Communication</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Master</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <b>TO</b>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input name="present" id="present" type="checkbox" value="">
+                        <label for="present"><span class="icon"><i class="fa-solid fa-check"></i></span>Present</label>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Education</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 工作經歷 -->
+        <div class="form-row">
+            <div class="form-row__name">Occupation</div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <select>
+                        <option>Education</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>ESL Teacher</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <b>TO</b>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input name="present" id="present" type="checkbox" value="">
+                        <label for="present"><span class="icon"><i class="fa-solid fa-check"></i></span>Present</label>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <select>
+                        <option>Education</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>ESL Teacher</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <b>TO</b>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <div class="column half">
+                    <input name="present" id="present" type="checkbox" value="">
+                        <label for="present"><span class="icon"><i class="fa-solid fa-check"></i></span>Present</label>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Job</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 證照 -->
+        <div class="form-row">
+            <div class="form-row__name">License</div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="License Name" value="Toeic">
+                </div>
+
+                <div class="column">
+                    <input type="text" placeholder="License Name" value="900">
+                </div>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <div class="column half">
+                    <span class="state certifing"><i class="fa-solid fa-circle-exclamation"></i> 認證中</span>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="License Name" value="日文檢定">
+                </div>
+
+                <div class="column">
+                    <input type="text" placeholder="License Name" value="乙級">
+                </div>
+
+                <div class="column half">
+                    <input type="text" placeholder="年/月/日" value="2023.11.1">
+    
+                    <!-- icon -->
+                    <button class="icon-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+
+                <div class="column half">
+                    <span class="state certified"><i class="fa-solid fa-circle-check"></i> 已認證</span>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add License</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 興趣 -->
+        <div class="form-row">
+            <div class="form-row__name">Hobby</div>
+
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="Hobby Name" value="Tennis">
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Outdoor</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Sports</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-row__field select-option">
+                <div class="column">
+                    <input type="text" placeholder="Hobby Name">
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Outdoor</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column">
+                    <select>
+                        <option>Sports</option>
+                    </select>
+                    <!-- icon -->
+                    <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+
+                <div class="column half">
+                    <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div><!-- END .form-row__field -->
+
+            <div class="form-row__field">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> Add Hobby</button>
+            </div>
+        </div><!-- END .form-row -->
+
+        <!-- 接受教材 -->
+        <div class="form-row">
+            <div class="form-row__name">Teaching Material Badge</div>
+
+            <div class="form-row__field switch-option">
+                <div class="column">
+                    <input name="textbook0" id="textbook0" type="checkbox" value="" checked>
+                        <label for="textbook0"><span class="icon"><i class="fa-solid fa-check"></i></span>All</label>
+                </div>
+
+                <div class="column">
+                    <input name="textbook1" id="textbook1" type="checkbox" value="" checked>
+                        <label for="textbook1"><span class="icon"><i class="fa-solid fa-check"></i></span>Free Talk</label>
+                </div>
+
+                <div class="column">
+                    <input name="textbook2" id="textbook2" type="checkbox" value="" checked>
+                        <label for="textbook2"><span class="icon"><i class="fa-solid fa-check"></i></span>Daily News</label>
+                </div>
+
+                <div class="column">
+                    <input name="textbook3" id="textbook3" type="checkbox" value="" checked>
+                        <label for="textbook3"><span class="icon"><i class="fa-solid fa-check"></i></span>Kids</label>
+                </div>
+            </div>
+        </div><!-- END .form-row -->
         
         <div class="updatebar"><button class="basic-btn"><i class="fa-solid fa-floppy-disk"></i> Update</button></div>
     </div><!-- END .setting-wrap -->    
