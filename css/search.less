@@ -1,7 +1,7 @@
 @import url("setting");
 
 /* 搜尋頁面 */
-.container.search { 
+.container.search, .container-gk.search { 
     .search-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 15px; }
 
     h2 { margin: 0 auto; padding: 40px 0 0 0; }
@@ -76,7 +76,10 @@
 }
 
 @media (max-width: 820px) {
-    .container.search .search-wrap { padding: 0; }
+    .container.search, .container-gk.search {
+        .search-wrap { padding: 0; }
+    }
+
     .teacher-list { padding-left: 15px; padding-right: 15px;
         .teacher-list__intro { width: calc(50% - 8px); margin: 0 8px 16px 8px; 
             .country { 
@@ -136,7 +139,7 @@
 }
 
 /* 講師排行榜 */
-.container.teacher-rank { min-height: 80dvh;
+.container.teacher-rank, .container-gk.teacher-rank { min-height: 80dvh;
     .rank-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 20px 15px 0 15px; 
         h2 { padding: 0; }
         .tabs { position: sticky; top: 80px; width: 100%; margin: 0 auto 30px auto; padding: 10px 15px 0 15px; text-align: center; border-bottom: 1px solid @color-cisbase; background: @color-lightist; z-index: 1;
@@ -165,7 +168,7 @@
 }
 
 @media (max-width: 820px) {
-    .container.teacher-rank { 
+    .container.teacher-rank, .container-gk.teacher-rank { 
         .tabs { margin: 0 auto !important; 
             > a { font-size: 16px !important; }
         }

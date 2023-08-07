@@ -1,7 +1,7 @@
 @import url("setting");
 
 /* 登入/註冊/忘記密碼 */
-.container.member { padding: 5% 0; }
+.container.member, .container-gk.member { padding: 5% 0; }
 
 .login { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
     h2 { padding-top: 0; font-size: 20px; border-bottom: 1px solid @color-cisbase-light; }
@@ -72,6 +72,6 @@
 }
 
 @media (max-width: 820px) {
-    .container.member { padding-top: 0; background: @color-white; }
+    .container.member, .container-gk.member { padding-top: 0; background: @color-white; }
     .login { border-radius: 0; }
 }

@@ -1,7 +1,7 @@
 @import url("setting");
 
 /* 課程券紀錄 */
-.container.history { min-height: 70dvh; padding: 0 15px 50px 15px;
+.container.history, .container-gk.history { min-height: 70dvh; padding: 0 15px 50px 15px;
     h2 { margin-bottom: 0; }
 }
 
@@ -88,7 +88,7 @@
 }
 
 /* 預約列表/上課紀錄 */
-.container.reservation, .container.lession-history { min-height: 70dvh; padding: 20px 10px 50px 10px;
+.container.reservation, .container.lession-history, .container-gk.reservation, .container-gk.lession-history { min-height: 70dvh; padding: 20px 10px 50px 10px;
     h2 { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; white-space: nowrap; 
         .back { display: inline-block; margin-right: 10px; font-size: 16px; text-decoration: underline; }
         i { margin-right: 10px; font-size: 16px; }
@@ -160,7 +160,7 @@
 }
 
 @media (max-width: 820px) {
-    .container.reservation, .container.lession-history {
+    .container.reservation, .container.lession-history, .container-gk.reservation, .container-gk.lession-history {
         h2 { flex-flow: wrap;
             > div { width: 100%; }
             .form-row__field { width: calc(50% - 10px); margin: 5px 5px 0 5px; }

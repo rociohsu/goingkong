@@ -1,7 +1,7 @@
 @import url("setting");
 
 /* 教材 */
-.container.textbook { padding-top: 10px; }
+.container.textbook, .container-gk.textbook { padding-top: 10px; }
 .textbook-wrap { width: 100%; max-width: 1440px; margin: 0 auto;
     display: flex; flex-flow: nowrap; justify-content: space-between; 
 
@@ -31,7 +31,10 @@
 }
 
 @media (max-width: 820px) {
-    .container.textbook > h2 { margin-bottom: 0; }
+    .container.textbook, .container-gk.textbook {
+        > h2 { margin-bottom: 0; }
+    }
+    
     .textbook-wrap { flex-flow: wrap; 
         .textbook-left { width: 100%; margin-right: 0; }
         .textbook-right { width: 100%; }
