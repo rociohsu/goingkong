@@ -101,6 +101,12 @@ header.admin {
 /* teacher setting */
 .setting-wrap { position: relative; width: 100%; max-width: 1240px; margin: 0 auto; padding: 10px 30px 30px 30px; 
     background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+    .tabs { position: sticky; top: 85px; z-index: 1; 
+        > a:not(.current) { background: @color-lightist; }
+        > a:not(.current):hover { background: @color-cisbase-light; }
+    }
+
     .updatebar { position: sticky; width: 100%; bottom: 0; padding: 10px 20px; text-align: center; background: rgba(255, 255, 255, 0.9); 
         .basic-btn { min-width: 300px; padding: 10px 25px; margin: 0 auto; font-size: 20px; }
     }
@@ -209,6 +215,12 @@ header.admin {
             input[type=text], input[type=email], input[type=password], input[type=number] { border: 3px solid @color-red; }
         }
     }
+    .form-row.nowrap { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+        .form-row__name { margin-right: 10px; font-size: 18px; }
+        .form-row__field { min-width: 100px;
+            > select { padding-right: 35px; }
+        }
+    }
 
     .profile-section { display: flex; flex-flow: nowrap; justify-content: center; align-items: flex-end;
         margin: 0 auto; font-size: 20px; text-align: center; 
@@ -263,5 +275,24 @@ header.admin {
                 > img { height: 120px; }
             }
         }
+    }
+}
+
+/* 課程設定 */
+.container.admin .setting-wrap .panel .plan-wrap { margin: 30px auto 20px auto; display: flex; flex-flow: wrap; justify-content: center;
+    .plan-group { position: relative; width: calc(50% - 40px); margin: 20px 20px 30px 20px; padding: 20px; background: @color-white; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); }
+    .plan-group.add .form-row .form-row__field { justify-content: center; }
+}
+
+.container.admin .setting-wrap .panel.panel-formal .plan-wrap { counter-reset: num; justify-content: space-between;
+    .plan-group:not(.add):before { position: absolute; display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+        width: 50px; height: 50px; top: -20px; left: 0; right: 0; margin: 0 auto;
+        font-size: 24px; color: @color-cisbase; background: @color-cisbase-light;  border-radius: 99em;  
+        counter-increment: num; content: counter(num); }
+}
+
+@media (max-width: 820px) {
+    .container.admin .setting-wrap .panel .plan-wrap { 
+        .plan-group { width: 100%; margin: 10px auto 50px auto; }
     }
 }
