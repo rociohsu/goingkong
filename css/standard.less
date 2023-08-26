@@ -90,7 +90,7 @@ img { max-width: 100%; height: auto; }
 
 /* header */
 header { position: sticky; display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-    top: 0; padding: 15px 25px; background: @color-white; border-bottom: 1px solid @color-lighter !important; z-index: 2;
+    width: 100%; top: 0; padding: 15px 25px; background: @color-white; border-bottom: 1px solid @color-lighter !important; z-index: 2;
 
     > * { width: 100%; }
     .header-l { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
@@ -117,6 +117,17 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
     }
     .menu { display: flex; flex-flow: nowrap; justify-content: flex-end; align-items: center;
         > *, .menu-r > * { display: inline-block; margin: 0 10px; }
+        
+        .bar-msg { position: relative; margin-left: 5px; padding-right: 5px; font-size: 20px; z-index: 1; 
+            .new-msg {position: absolute; width: 24px; height: 24px; right: -12px; top: -10px; 
+                display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+                background: @color-red; border-radius: 99em; border: 2px solid @color-white;
+                overflow: hidden;
+
+                > span { color: @color-white; font-size: 11px;  transform: scale(0.9); -webkit-transform: scale(0.9); }
+            }
+        }
+
         .bar-cart { position: relative; font-size: 20px; z-index: 1; }
         .bar-mobile { display: none; }
         .bar-faq { position: fixed; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
@@ -128,27 +139,26 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
                 > img { width: 100%; height: auto; }
             }
         }
-        .user-pic.new-msg::after { display: block; content: ''; position: absolute; width: 15px; height: 15px; right: -3px; top: -3px; 
-            background: @color-green; border-radius: 99em; 
-            -webkit-animation: color-shiny 1.5s infinite; 
-            animation: color-shiny 1.5s infinite;
-        }
 
-        .menu-r-mobile { display: none; }
+        .menu-r-mobile { display: none !important; }
         .menu-r { display: flex; flex-flow: row; justify-content: flex-end; align-items: center;
 
-            > .menu-r-btn > a { display: inline-block; padding: 5px 15px; background: @color-cisbase-light; border-radius: 25px; transition: 0.3s; }
+            .form-row__field { position: relative; display: inline-flex; align-items: center; 
+                width: 120px;
+                background: @color-cisbase-light; border-radius: 25px;
+                select { width: 100%; height: 35px; padding: 5px 35px 5px 15px; color: @color-cisbase; border: none; background: none; }
+                .icon-btn { display: block; position: absolute; right: 2px; top: 5px; bottom: 0; margin: auto 0; padding: 5px 10px; color: @color-cisbase; background: none; }
+                .icon-btn.select { pointer-events: none; }
+            }
+
+            > .menu-r-btn > a { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                height: 35px; padding: 5px 15px; white-space: nowrap; background: @color-cisbase-light; border-radius: 25px; transition: 0.3s; }
             > .menu-r-btn > a:hover { color: @color-white; background: @color-cisbase; }
             .menu-r-second { display: none; 
                 > a { position: relative; display: block; margin-bottom: 10px; padding: 10px 15px; color: @color-normal; border: 1px solid @color-cisbase-light; border-radius: 10px;
                     > i { color: @color-cisbase; }
                 }
                 > a:hover { background: @color-cisbase-light; }
-                .new-msg::after { display: block; content: ''; position: absolute; width: 15px; height: 15px; right: -3px; top: -3px; 
-                    background: @color-green; border-radius: 99em; 
-                    -webkit-animation: color-shiny 1.5s infinite; 
-                    animation: color-shiny 1.5s infinite;
-                }
             }
             .user-pic { 
                 > a { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
@@ -157,14 +167,14 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
                 }
             }
         }
-        .menu-r.current { display: none; position: relative; flex-flow: wrap; justify-content: flex-end; position: absolute; width: 240px; right: 60px; top: 0; padding: 20px 15px; background: @color-white; border-radius: 0 0 10px 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 0;
-            > *:not(.menu-r-mobile) { display: block; }
+        .menu-r.current { display: none; position: relative; flex-flow: wrap; justify-content: flex-end; position: absolute; width: 240px; right: 100px; top: 0; padding: 20px 15px; background: @color-white; border-radius: 0 0 10px 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); overflow: hidden; z-index: 2;
+            > *:not(.menu-r-mobile) { display: block !important; }
             > *:not(.user-pic) { width: 100%; margin: 0 auto 5px auto; }
             .menu-r-close { position: absolute; display: block; width: 45px; top: 21px; right: 15px; padding: 5px 0; color: @color-light; font-size: 24px; cursor: pointer; text-align: center; z-index: 1;
                 > i { visibility: hidden; }
             }
             .user-pic { justify-content: flex-end; margin-left: calc(100% - 40px); }
-            .user-name { display: block; margin: 10px auto; padding: 0 10px; word-break: break-all; }
+            .user-name { display: block; margin: 10px auto; padding: 0 10px; text-align: center; word-break: break-all; }
             .menu-r-btn { margin-top: 10px; 
                 > a { width: 100%; padding: 10px; text-align: center; }
             }
@@ -186,16 +196,18 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
         }
         .menu { position: fixed; width: auto; top: 10px; right: 5px;
             .bar-mobile { position: relative; display: block; color: @color-cisbase !important; font-size: 24px; }
-            .menu-r-mobile { display: block; }
-            .new-msg::after { display: block; content: ''; position: absolute; width: 15px; height: 15px; right: -7px; top: -3px; 
-                background: @color-green; border-radius: 99em; 
-                -webkit-animation: color-shiny 1.5s infinite; 
-                animation: color-shiny 1.5s infinite;
-            }
+            .menu-r-mobile { display: block !important; }
+            
             .menu-r { display: none; }
             .menu-r.current {
                 position: fixed; width: 75%; top: 0; bottom: 0; right: 0; margin: 0; padding: 50px 15px 20px 15px;
                 background: @color-white; box-shadow: -3px 0px 3px rgba(0, 0, 0, 0.1); overflow: auto; z-index: 2;
+
+                .form-row__field.menu-r-mobile { margin-bottom: 20px; 
+                    background: @color-white; border: 1px solid @color-light; border-radius: 25px;
+                    select { color: @color-normal; }
+                    .icon-btn { color: @color-normal; }
+                }
 
                 > * { display: block; }
                 .menu-r-close { position: fixed; top: 12px; right: 10px; color: @color-light; font-size: 24px; cursor: pointer; 
@@ -205,7 +217,7 @@ header { position: sticky; display: flex; flex-flow: nowrap; justify-content: sp
                 .user-pic { width: 120px; height: 120px; margin: 0 auto; 
                     > a { width: 100%; height: 100%; }
                 }
-                .user-name { margin: 20px auto; text-align: center; word-break: break-all; }
+                .user-name { margin: 20px auto; }
                 .menu-r-btn { margin-top: 10px; 
                     > a { width: 100%; padding: 10px; text-align: center; }
                 }

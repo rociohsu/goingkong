@@ -29,11 +29,12 @@
 
         .bottom-bar { position: absolute; width: 100%; padding: 15px 20px; left: 0; bottom: 0; 
             display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
-            background: rgba(0,0,0,0.5); 
-            .price { color: @color-white; font-size: 20px; word-break: keep-all;
+            background: rgba(255,255,255,0.9); 
+            .price { color: @color-dark; font-size: 20px; word-break: keep-all;
                 del { display: inline-block; margin-right: 5px; font-size: 14px; white-space: nowrap; opacity: 0.8; }
+                span { color: @color-red; font-weight: bold; }
             }
-            .btn { color: @color-white; font-size: 20px; text-align: right; white-space: nowrap; }
+            .btn { color: @color-cisbase; font-size: 20px; text-align: right; white-space: nowrap; }
         }
     }
 

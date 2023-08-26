@@ -61,19 +61,38 @@
     <div class="menu">
         <!-- 展開前 -->
         <div class="menu-r">
+            <div class="form-row__field">
+                <select>
+                    <option selected>繁體中文</option>
+                    <option>English</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
             <div class="menu-r-btn"><a href="register.html">註冊</a></div>
             <div class="menu-r-btn"><a href="login.html">登入</a></div>
-            <div class="user-pic new-msg"><a><img src="images/headpic.jpg"></a></div>
+            <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
         </div>
 
         <!-- 展開後 -->
         <div class="menu-r current">
-            <div class="menu-r-mobile menu-r-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="menu-r-close"><i class="fa-solid fa-xmark"></i></div>
             <div class="user-pic"><a><img src="images/headpic.jpg"></a></div>
-            <div class="menu-r-mobile user-name">
+
+            <div class="user-name">
                 <b>cww20811ss@gmail.com</b><br>
                 歡迎光臨!
             </div>
+
+            <div class="form-row__field menu-r-mobile">
+                <select>
+                    <option selected>繁體中文</option>
+                    <option>English</option>
+                </select>
+                <!-- icon -->
+                <button class="icon-btn select"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+
             <div class="menu-r-second">
                 <a href="profile.html"><i class="fa-solid fa-caret-right"></i> <b>會員資料設定</b></a>
             </div>
@@ -87,16 +106,21 @@
                 <a href="ticket-history.html"><i class="fa-solid fa-caret-right"></i> <b>課程券記錄</b></a>
             </div>
             <div class="menu-r-second">
-                <a class="new-msg" href="chat-history.html"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a>
+                <a href="chat-history.html"><i class="fa-solid fa-caret-right"></i> <b>聊天記錄</b></a>
             </div>
             <br>
             <div class="menu-r-btn"><a href="register.html">註冊</a></div>
             <div class="menu-r-btn"><a href="login.html">登入</a></div>
-            <div class="menu-r-mobile menu-r-btn"><a href="#">登出</a></div>
+            <div class="menu-r-btn"><a href="#">登出</a></div>
         </div>
 
+        <a class="bar-msg" href="chat.html"><i class="fa-solid fa-paper-plane"></i><!-- 查看訊息 -->
+            <div class="new-msg"><span>99</span></div>
+        </a>
+
         <a class="bar-cart" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i><!-- 購物車 --></a>
-        <div class="bar-mobile new-msg"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
+
+        <div class="bar-mobile"><i class="fa-solid fa-bars"></i><!-- 手機版選單ICON --></div>
     </div>
 </header>
 
