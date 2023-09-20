@@ -179,3 +179,53 @@
         }
     }
 }
+
+/* 上課視窗調整 */
+.lk-room-container {
+    .lk-grid-layout { overflow: hidden;
+        .lk-participant-tile {
+            position: absolute !important;
+            width: 100%; height: 100%;
+            top: 0; right: 0; bottom: 0; left: 0;
+            border: 0; border-radius: 0;
+
+            .lk-participant-media-video {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* 自己的(小視窗) */
+        .lk-participant-tile:first-child {
+            position: absolute !important;
+            width: 25%; height: auto;
+            top: 8px; right: 8px; bottom: auto; left: auto;
+            padding-top: 35%; /*3:4*/
+            border: 3px solid #ffffff; z-index: 1;
+        }
+
+        /* 對方的(大視窗) */
+        .lk-participant-tile:last-child {
+            position: relative;
+            width: 100%; height: 95dvh;
+            top: 0; right: 0; bottom: 0; left: 0;
+            border: 0; border-radius: 0;
+        }
+    }
+
+    /* video bar */
+    .lk-control-bar {
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        z-index: 1;
+        border-top: none;
+    }
+    .lk-control-bar .lk-button-group:last-child {
+        margin-left: 10px;
+    }
+}
